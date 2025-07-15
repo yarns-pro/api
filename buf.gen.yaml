@@ -1,0 +1,20 @@
+version: v2
+plugins:
+  # golang
+  - remote: buf.build/protocolbuffers/go:v1.36.6
+    out: pkg/go
+    opt:
+      - paths=source_relative
+  - remote: buf.build/grpc/go:v1.5.1
+    out: pkg/go
+    opt:
+      - paths=source_relative
+    # kotlin
+  - remote: buf.build/grpc/kotlin:v1.4.3
+    out: pkg/kotlin
+  - remote: buf.build/protocolbuffers/kotlin:v31.1
+    out: pkg/kotlin
+  - remote: buf.build/grpc/java:v1.73.0
+    out: pkg/kotlin
+  - remote: buf.build/protocolbuffers/java:v31.1
+    out: pkg/kotlin

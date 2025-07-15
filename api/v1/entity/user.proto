@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/yarns-pro/api/pkg/go/v1/entity";
+option java_multiple_files = true;
+option java_package = "ru.kamenetskii.yarns.api.v1.entity";
+option java_outer_classname = "EntityProto";
+
+package ru.kamenetskii.yarns.api.v1.entity;
+
+import "google/protobuf/timestamp.proto";
+
+message User {
+  int64 id = 1;
+  bytes publicKey = 2;
+  google.protobuf.Timestamp createdAt = 3;
+  google.protobuf.Timestamp activeAt = 4;
+}
