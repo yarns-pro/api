@@ -2,16 +2,17 @@ syntax = "proto3";
 
 option go_package = "github.com/yarns-pro/api/pkg/go/v1/service";
 option java_multiple_files = true;
-option java_package = "ru.kamenetskii.yarns.api.v1.service";
+option java_package = "pro.yarns.api.v1.service";
 option java_outer_classname = "ServiceProto";
 
-package ru.kamenetskii.yarns.api.v1.service;
+package pro.yarns.api.v1.service;
 
 import "v1/entity/user.proto";
+import "v1/entity/message.proto";
 
 service YarnsApiV1 {
   rpc Register (RegisterRequest) returns (RegisterResponse);
-  rpc GetById (GetByIdRequest) returns (GetByIdResponse);
+  rpc GetUserById (GetUserByIdRequest) returns (GetUserByIdResponse);
 }
 
 message RegisterRequest {
@@ -22,10 +23,10 @@ message RegisterResponse {
   entity.User user = 1;
 }
 
-message GetByIdRequest {
+message GetUserByIdRequest {
   int64 userId = 1;
 }
 
-message GetByIdResponse {
+message GetUserByIdResponse {
   entity.User user = 1;
 }

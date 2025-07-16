@@ -110,27 +110,27 @@ func (x *RegisterResponse) GetUser() *entity.User {
 	return nil
 }
 
-type GetByIdRequest struct {
+type GetUserByIdRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserId        int64                  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *GetByIdRequest) Reset() {
-	*x = GetByIdRequest{}
+func (x *GetUserByIdRequest) Reset() {
+	*x = GetUserByIdRequest{}
 	mi := &file_v1_service_service_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *GetByIdRequest) String() string {
+func (x *GetUserByIdRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*GetByIdRequest) ProtoMessage() {}
+func (*GetUserByIdRequest) ProtoMessage() {}
 
-func (x *GetByIdRequest) ProtoReflect() protoreflect.Message {
+func (x *GetUserByIdRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_v1_service_service_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -142,39 +142,39 @@ func (x *GetByIdRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use GetByIdRequest.ProtoReflect.Descriptor instead.
-func (*GetByIdRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use GetUserByIdRequest.ProtoReflect.Descriptor instead.
+func (*GetUserByIdRequest) Descriptor() ([]byte, []int) {
 	return file_v1_service_service_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *GetByIdRequest) GetUserId() int64 {
+func (x *GetUserByIdRequest) GetUserId() int64 {
 	if x != nil {
 		return x.UserId
 	}
 	return 0
 }
 
-type GetByIdResponse struct {
+type GetUserByIdResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	User          *entity.User           `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *GetByIdResponse) Reset() {
-	*x = GetByIdResponse{}
+func (x *GetUserByIdResponse) Reset() {
+	*x = GetUserByIdResponse{}
 	mi := &file_v1_service_service_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *GetByIdResponse) String() string {
+func (x *GetUserByIdResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*GetByIdResponse) ProtoMessage() {}
+func (*GetUserByIdResponse) ProtoMessage() {}
 
-func (x *GetByIdResponse) ProtoReflect() protoreflect.Message {
+func (x *GetUserByIdResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_v1_service_service_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -186,12 +186,12 @@ func (x *GetByIdResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use GetByIdResponse.ProtoReflect.Descriptor instead.
-func (*GetByIdResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use GetUserByIdResponse.ProtoReflect.Descriptor instead.
+func (*GetUserByIdResponse) Descriptor() ([]byte, []int) {
 	return file_v1_service_service_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *GetByIdResponse) GetUser() *entity.User {
+func (x *GetUserByIdResponse) GetUser() *entity.User {
 	if x != nil {
 		return x.User
 	}
@@ -202,20 +202,20 @@ var File_v1_service_service_proto protoreflect.FileDescriptor
 
 const file_v1_service_service_proto_rawDesc = "" +
 	"\n" +
-	"\x18v1/service/service.proto\x12#ru.kamenetskii.yarns.api.v1.service\x1a\x14v1/entity/user.proto\"/\n" +
+	"\x18v1/service/service.proto\x12\x18pro.yarns.api.v1.service\x1a\x14v1/entity/user.proto\x1a\x17v1/entity/message.proto\"/\n" +
 	"\x0fRegisterRequest\x12\x1c\n" +
-	"\tpublicKey\x18\x01 \x01(\fR\tpublicKey\"P\n" +
-	"\x10RegisterResponse\x12<\n" +
-	"\x04user\x18\x01 \x01(\v2(.ru.kamenetskii.yarns.api.v1.entity.UserR\x04user\"(\n" +
-	"\x0eGetByIdRequest\x12\x16\n" +
-	"\x06userId\x18\x01 \x01(\x03R\x06userId\"O\n" +
-	"\x0fGetByIdResponse\x12<\n" +
-	"\x04user\x18\x01 \x01(\v2(.ru.kamenetskii.yarns.api.v1.entity.UserR\x04user2\xfb\x01\n" +
+	"\tpublicKey\x18\x01 \x01(\fR\tpublicKey\"E\n" +
+	"\x10RegisterResponse\x121\n" +
+	"\x04user\x18\x01 \x01(\v2\x1d.pro.yarns.api.v1.entity.UserR\x04user\",\n" +
+	"\x12GetUserByIdRequest\x12\x16\n" +
+	"\x06userId\x18\x01 \x01(\x03R\x06userId\"H\n" +
+	"\x13GetUserByIdResponse\x121\n" +
+	"\x04user\x18\x01 \x01(\v2\x1d.pro.yarns.api.v1.entity.UserR\x04user2\xdb\x01\n" +
 	"\n" +
-	"YarnsApiV1\x12w\n" +
-	"\bRegister\x124.ru.kamenetskii.yarns.api.v1.service.RegisterRequest\x1a5.ru.kamenetskii.yarns.api.v1.service.RegisterResponse\x12t\n" +
-	"\aGetById\x123.ru.kamenetskii.yarns.api.v1.service.GetByIdRequest\x1a4.ru.kamenetskii.yarns.api.v1.service.GetByIdResponseBa\n" +
-	"#ru.kamenetskii.yarns.api.v1.serviceB\fServiceProtoP\x01Z*github.com/yarns-pro/api/pkg/go/v1/serviceb\x06proto3"
+	"YarnsApiV1\x12a\n" +
+	"\bRegister\x12).pro.yarns.api.v1.service.RegisterRequest\x1a*.pro.yarns.api.v1.service.RegisterResponse\x12j\n" +
+	"\vGetUserById\x12,.pro.yarns.api.v1.service.GetUserByIdRequest\x1a-.pro.yarns.api.v1.service.GetUserByIdResponseBV\n" +
+	"\x18pro.yarns.api.v1.serviceB\fServiceProtoP\x01Z*github.com/yarns-pro/api/pkg/go/v1/serviceb\x06proto3"
 
 var (
 	file_v1_service_service_proto_rawDescOnce sync.Once
@@ -231,19 +231,19 @@ func file_v1_service_service_proto_rawDescGZIP() []byte {
 
 var file_v1_service_service_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_v1_service_service_proto_goTypes = []any{
-	(*RegisterRequest)(nil),  // 0: ru.kamenetskii.yarns.api.v1.service.RegisterRequest
-	(*RegisterResponse)(nil), // 1: ru.kamenetskii.yarns.api.v1.service.RegisterResponse
-	(*GetByIdRequest)(nil),   // 2: ru.kamenetskii.yarns.api.v1.service.GetByIdRequest
-	(*GetByIdResponse)(nil),  // 3: ru.kamenetskii.yarns.api.v1.service.GetByIdResponse
-	(*entity.User)(nil),      // 4: ru.kamenetskii.yarns.api.v1.entity.User
+	(*RegisterRequest)(nil),     // 0: pro.yarns.api.v1.service.RegisterRequest
+	(*RegisterResponse)(nil),    // 1: pro.yarns.api.v1.service.RegisterResponse
+	(*GetUserByIdRequest)(nil),  // 2: pro.yarns.api.v1.service.GetUserByIdRequest
+	(*GetUserByIdResponse)(nil), // 3: pro.yarns.api.v1.service.GetUserByIdResponse
+	(*entity.User)(nil),         // 4: pro.yarns.api.v1.entity.User
 }
 var file_v1_service_service_proto_depIdxs = []int32{
-	4, // 0: ru.kamenetskii.yarns.api.v1.service.RegisterResponse.user:type_name -> ru.kamenetskii.yarns.api.v1.entity.User
-	4, // 1: ru.kamenetskii.yarns.api.v1.service.GetByIdResponse.user:type_name -> ru.kamenetskii.yarns.api.v1.entity.User
-	0, // 2: ru.kamenetskii.yarns.api.v1.service.YarnsApiV1.Register:input_type -> ru.kamenetskii.yarns.api.v1.service.RegisterRequest
-	2, // 3: ru.kamenetskii.yarns.api.v1.service.YarnsApiV1.GetById:input_type -> ru.kamenetskii.yarns.api.v1.service.GetByIdRequest
-	1, // 4: ru.kamenetskii.yarns.api.v1.service.YarnsApiV1.Register:output_type -> ru.kamenetskii.yarns.api.v1.service.RegisterResponse
-	3, // 5: ru.kamenetskii.yarns.api.v1.service.YarnsApiV1.GetById:output_type -> ru.kamenetskii.yarns.api.v1.service.GetByIdResponse
+	4, // 0: pro.yarns.api.v1.service.RegisterResponse.user:type_name -> pro.yarns.api.v1.entity.User
+	4, // 1: pro.yarns.api.v1.service.GetUserByIdResponse.user:type_name -> pro.yarns.api.v1.entity.User
+	0, // 2: pro.yarns.api.v1.service.YarnsApiV1.Register:input_type -> pro.yarns.api.v1.service.RegisterRequest
+	2, // 3: pro.yarns.api.v1.service.YarnsApiV1.GetUserById:input_type -> pro.yarns.api.v1.service.GetUserByIdRequest
+	1, // 4: pro.yarns.api.v1.service.YarnsApiV1.Register:output_type -> pro.yarns.api.v1.service.RegisterResponse
+	3, // 5: pro.yarns.api.v1.service.YarnsApiV1.GetUserById:output_type -> pro.yarns.api.v1.service.GetUserByIdResponse
 	4, // [4:6] is the sub-list for method output_type
 	2, // [2:4] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name

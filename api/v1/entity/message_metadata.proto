@@ -4,9 +4,8 @@ package pro.yarns.api.v1.entity;
 
 import "google/protobuf/timestamp.proto";
 
-message User {
-  int64 id = 1;
-  bytes publicKey = 2;
-  google.protobuf.Timestamp createdAt = 3;
-  google.protobuf.Timestamp activeAt = 4;
+message MessageMetadata {
+  string mimeType = 1;
+  string filename = 2;
+  int64 filesize = 3;
 }

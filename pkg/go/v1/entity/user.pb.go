@@ -94,13 +94,12 @@ var File_v1_entity_user_proto protoreflect.FileDescriptor
 
 const file_v1_entity_user_proto_rawDesc = "" +
 	"\n" +
-	"\x14v1/entity/user.proto\x12\"ru.kamenetskii.yarns.api.v1.entity\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa6\x01\n" +
+	"\x14v1/entity/user.proto\x12\x17pro.yarns.api.v1.entity\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa6\x01\n" +
 	"\x04User\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x1c\n" +
 	"\tpublicKey\x18\x02 \x01(\fR\tpublicKey\x128\n" +
 	"\tcreatedAt\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\tcreatedAt\x126\n" +
-	"\bactiveAt\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\bactiveAtB^\n" +
-	"\"ru.kamenetskii.yarns.api.v1.entityB\vEntityProtoP\x01Z)github.com/yarns-pro/api/pkg/go/v1/entityb\x06proto3"
+	"\bactiveAt\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\bactiveAtB+Z)github.com/yarns-pro/api/pkg/go/v1/entityb\x06proto3"
 
 var (
 	file_v1_entity_user_proto_rawDescOnce sync.Once
@@ -116,12 +115,12 @@ func file_v1_entity_user_proto_rawDescGZIP() []byte {
 
 var file_v1_entity_user_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_v1_entity_user_proto_goTypes = []any{
-	(*User)(nil),                  // 0: ru.kamenetskii.yarns.api.v1.entity.User
+	(*User)(nil),                  // 0: pro.yarns.api.v1.entity.User
 	(*timestamppb.Timestamp)(nil), // 1: google.protobuf.Timestamp
 }
 var file_v1_entity_user_proto_depIdxs = []int32{
-	1, // 0: ru.kamenetskii.yarns.api.v1.entity.User.createdAt:type_name -> google.protobuf.Timestamp
-	1, // 1: ru.kamenetskii.yarns.api.v1.entity.User.activeAt:type_name -> google.protobuf.Timestamp
+	1, // 0: pro.yarns.api.v1.entity.User.createdAt:type_name -> google.protobuf.Timestamp
+	1, // 1: pro.yarns.api.v1.entity.User.activeAt:type_name -> google.protobuf.Timestamp
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name

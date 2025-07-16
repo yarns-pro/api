@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	YarnsApiV1_Register_FullMethodName = "/ru.kamenetskii.yarns.api.v1.service.YarnsApiV1/Register"
-	YarnsApiV1_GetById_FullMethodName  = "/ru.kamenetskii.yarns.api.v1.service.YarnsApiV1/GetById"
+	YarnsApiV1_Register_FullMethodName    = "/pro.yarns.api.v1.service.YarnsApiV1/Register"
+	YarnsApiV1_GetUserById_FullMethodName = "/pro.yarns.api.v1.service.YarnsApiV1/GetUserById"
 )
 
 // YarnsApiV1Client is the client API for YarnsApiV1 service.
@@ -28,7 +28,7 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type YarnsApiV1Client interface {
 	Register(ctx context.Context, in *RegisterRequest, opts ...grpc.CallOption) (*RegisterResponse, error)
-	GetById(ctx context.Context, in *GetByIdRequest, opts ...grpc.CallOption) (*GetByIdResponse, error)
+	GetUserById(ctx context.Context, in *GetUserByIdRequest, opts ...grpc.CallOption) (*GetUserByIdResponse, error)
 }
 
 type yarnsApiV1Client struct {
@@ -49,10 +49,10 @@ func (c *yarnsApiV1Client) Register(ctx context.Context, in *RegisterRequest, op
 	return out, nil
 }
 
-func (c *yarnsApiV1Client) GetById(ctx context.Context, in *GetByIdRequest, opts ...grpc.CallOption) (*GetByIdResponse, error) {
+func (c *yarnsApiV1Client) GetUserById(ctx context.Context, in *GetUserByIdRequest, opts ...grpc.CallOption) (*GetUserByIdResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(GetByIdResponse)
-	err := c.cc.Invoke(ctx, YarnsApiV1_GetById_FullMethodName, in, out, cOpts...)
+	out := new(GetUserByIdResponse)
+	err := c.cc.Invoke(ctx, YarnsApiV1_GetUserById_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -64,7 +64,7 @@ func (c *yarnsApiV1Client) GetById(ctx context.Context, in *GetByIdRequest, opts
 // for forward compatibility.
 type YarnsApiV1Server interface {
 	Register(context.Context, *RegisterRequest) (*RegisterResponse, error)
-	GetById(context.Context, *GetByIdRequest) (*GetByIdResponse, error)
+	GetUserById(context.Context, *GetUserByIdRequest) (*GetUserByIdResponse, error)
 	mustEmbedUnimplementedYarnsApiV1Server()
 }
 
@@ -78,8 +78,8 @@ type UnimplementedYarnsApiV1Server struct{}
 func (UnimplementedYarnsApiV1Server) Register(context.Context, *RegisterRequest) (*RegisterResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Register not implemented")
 }
-func (UnimplementedYarnsApiV1Server) GetById(context.Context, *GetByIdRequest) (*GetByIdResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetById not implemented")
+func (UnimplementedYarnsApiV1Server) GetUserById(context.Context, *GetUserByIdRequest) (*GetUserByIdResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserById not implemented")
 }
 func (UnimplementedYarnsApiV1Server) mustEmbedUnimplementedYarnsApiV1Server() {}
 func (UnimplementedYarnsApiV1Server) testEmbeddedByValue()                    {}
@@ -120,20 +120,20 @@ func _YarnsApiV1_Register_Handler(srv interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
-func _YarnsApiV1_GetById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetByIdRequest)
+func _YarnsApiV1_GetUserById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetUserByIdRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(YarnsApiV1Server).GetById(ctx, in)
+		return srv.(YarnsApiV1Server).GetUserById(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: YarnsApiV1_GetById_FullMethodName,
+		FullMethod: YarnsApiV1_GetUserById_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(YarnsApiV1Server).GetById(ctx, req.(*GetByIdRequest))
+		return srv.(YarnsApiV1Server).GetUserById(ctx, req.(*GetUserByIdRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -142,7 +142,7 @@ func _YarnsApiV1_GetById_Handler(srv interface{}, ctx context.Context, dec func(
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var YarnsApiV1_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "ru.kamenetskii.yarns.api.v1.service.YarnsApiV1",
+	ServiceName: "pro.yarns.api.v1.service.YarnsApiV1",
 	HandlerType: (*YarnsApiV1Server)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -150,8 +150,8 @@ var YarnsApiV1_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _YarnsApiV1_Register_Handler,
 		},
 		{
-			MethodName: "GetById",
-			Handler:    _YarnsApiV1_GetById_Handler,
+			MethodName: "GetUserById",
+			Handler:    _YarnsApiV1_GetUserById_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

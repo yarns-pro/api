@@ -1,0 +1,7 @@
+syntax = "proto3";
+option go_package = "github.com/yarns-pro/api/pkg/go/v1/entity";
+option java_multiple_files = true;
+option java_package = "pro.yarns.api.v1.entity";
+option java_outer_classname = "EntityProto";
+
+package pro.yarns.api.v1.entity;
