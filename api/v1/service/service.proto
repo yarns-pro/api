@@ -9,10 +9,15 @@ package pro.yarns.api.v1.service;
 
 import "v1/entity/user.proto";
 import "v1/entity/message.proto";
+import "v1/entity/message_type.proto";
 
 service YarnsApiV1 {
   rpc Register (RegisterRequest) returns (RegisterResponse);
   rpc GetUserById (GetUserByIdRequest) returns (GetUserByIdResponse);
+  rpc SendMessage (SendMessageRequest) returns (SendMessageResponse);
+  rpc CheckMessages (CheckMessagesRequest) returns (CheckMessagesResponse);
+  rpc GetMessageById (GetMessageByIdRequest) returns (GetMessageByIdResponse);
+  rpc ConfirmReceive (ConfirmReceiveRequest) returns (ConfirmReceiveResponse);
 }
 
 message RegisterRequest {
@@ -30,3 +35,36 @@ message GetUserByIdRequest {
 message GetUserByIdResponse {
   entity.User user = 1;
 }
+
+message SendMessageRequest {
+  int64 to = 1;
+  entity.MessageType type = 2;
+  bytes encryptedMetadata = 3;
+  bytes encryptedBody = 4;
+}
+
+message SendMessageResponse {
+  int64 messageId = 1;
+}
+
+message CheckMessagesRequest {
+  int64 lastMessageId = 1;
+}
+
+message CheckMessagesResponse {
+  repeated entity.Message messages = 1;
+}
+
+message GetMessageByIdRequest {
+  int64 messageId = 1;
+}
+
+message GetMessageByIdResponse {
+  entity.Message message = 1;
+}
+
+message ConfirmReceiveRequest {
+  repeated int64 messageIds = 1;
+}
+
+message ConfirmReceiveResponse {}

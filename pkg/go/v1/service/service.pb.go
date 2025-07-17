@@ -198,11 +198,379 @@ func (x *GetUserByIdResponse) GetUser() *entity.User {
 	return nil
 }
 
+type SendMessageRequest struct {
+	state             protoimpl.MessageState `protogen:"open.v1"`
+	To                int64                  `protobuf:"varint,1,opt,name=to,proto3" json:"to,omitempty"`
+	Type              entity.MessageType     `protobuf:"varint,2,opt,name=type,proto3,enum=pro.yarns.api.v1.entity.MessageType" json:"type,omitempty"`
+	EncryptedMetadata []byte                 `protobuf:"bytes,3,opt,name=encryptedMetadata,proto3" json:"encryptedMetadata,omitempty"`
+	EncryptedBody     []byte                 `protobuf:"bytes,4,opt,name=encryptedBody,proto3" json:"encryptedBody,omitempty"`
+	unknownFields     protoimpl.UnknownFields
+	sizeCache         protoimpl.SizeCache
+}
+
+func (x *SendMessageRequest) Reset() {
+	*x = SendMessageRequest{}
+	mi := &file_v1_service_service_proto_msgTypes[4]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SendMessageRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SendMessageRequest) ProtoMessage() {}
+
+func (x *SendMessageRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_v1_service_service_proto_msgTypes[4]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SendMessageRequest.ProtoReflect.Descriptor instead.
+func (*SendMessageRequest) Descriptor() ([]byte, []int) {
+	return file_v1_service_service_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *SendMessageRequest) GetTo() int64 {
+	if x != nil {
+		return x.To
+	}
+	return 0
+}
+
+func (x *SendMessageRequest) GetType() entity.MessageType {
+	if x != nil {
+		return x.Type
+	}
+	return entity.MessageType(0)
+}
+
+func (x *SendMessageRequest) GetEncryptedMetadata() []byte {
+	if x != nil {
+		return x.EncryptedMetadata
+	}
+	return nil
+}
+
+func (x *SendMessageRequest) GetEncryptedBody() []byte {
+	if x != nil {
+		return x.EncryptedBody
+	}
+	return nil
+}
+
+type SendMessageResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	MessageId     int64                  `protobuf:"varint,1,opt,name=messageId,proto3" json:"messageId,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *SendMessageResponse) Reset() {
+	*x = SendMessageResponse{}
+	mi := &file_v1_service_service_proto_msgTypes[5]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SendMessageResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SendMessageResponse) ProtoMessage() {}
+
+func (x *SendMessageResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_v1_service_service_proto_msgTypes[5]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SendMessageResponse.ProtoReflect.Descriptor instead.
+func (*SendMessageResponse) Descriptor() ([]byte, []int) {
+	return file_v1_service_service_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *SendMessageResponse) GetMessageId() int64 {
+	if x != nil {
+		return x.MessageId
+	}
+	return 0
+}
+
+type CheckMessagesRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	LastMessageId int64                  `protobuf:"varint,1,opt,name=lastMessageId,proto3" json:"lastMessageId,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CheckMessagesRequest) Reset() {
+	*x = CheckMessagesRequest{}
+	mi := &file_v1_service_service_proto_msgTypes[6]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CheckMessagesRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CheckMessagesRequest) ProtoMessage() {}
+
+func (x *CheckMessagesRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_v1_service_service_proto_msgTypes[6]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CheckMessagesRequest.ProtoReflect.Descriptor instead.
+func (*CheckMessagesRequest) Descriptor() ([]byte, []int) {
+	return file_v1_service_service_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *CheckMessagesRequest) GetLastMessageId() int64 {
+	if x != nil {
+		return x.LastMessageId
+	}
+	return 0
+}
+
+type CheckMessagesResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Messages      []*entity.Message      `protobuf:"bytes,1,rep,name=messages,proto3" json:"messages,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CheckMessagesResponse) Reset() {
+	*x = CheckMessagesResponse{}
+	mi := &file_v1_service_service_proto_msgTypes[7]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CheckMessagesResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CheckMessagesResponse) ProtoMessage() {}
+
+func (x *CheckMessagesResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_v1_service_service_proto_msgTypes[7]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CheckMessagesResponse.ProtoReflect.Descriptor instead.
+func (*CheckMessagesResponse) Descriptor() ([]byte, []int) {
+	return file_v1_service_service_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *CheckMessagesResponse) GetMessages() []*entity.Message {
+	if x != nil {
+		return x.Messages
+	}
+	return nil
+}
+
+type GetMessageByIdRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	MessageId     int64                  `protobuf:"varint,1,opt,name=messageId,proto3" json:"messageId,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetMessageByIdRequest) Reset() {
+	*x = GetMessageByIdRequest{}
+	mi := &file_v1_service_service_proto_msgTypes[8]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetMessageByIdRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetMessageByIdRequest) ProtoMessage() {}
+
+func (x *GetMessageByIdRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_v1_service_service_proto_msgTypes[8]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetMessageByIdRequest.ProtoReflect.Descriptor instead.
+func (*GetMessageByIdRequest) Descriptor() ([]byte, []int) {
+	return file_v1_service_service_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *GetMessageByIdRequest) GetMessageId() int64 {
+	if x != nil {
+		return x.MessageId
+	}
+	return 0
+}
+
+type GetMessageByIdResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Message       *entity.Message        `protobuf:"bytes,1,opt,name=message,proto3" json:"message,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetMessageByIdResponse) Reset() {
+	*x = GetMessageByIdResponse{}
+	mi := &file_v1_service_service_proto_msgTypes[9]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetMessageByIdResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetMessageByIdResponse) ProtoMessage() {}
+
+func (x *GetMessageByIdResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_v1_service_service_proto_msgTypes[9]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetMessageByIdResponse.ProtoReflect.Descriptor instead.
+func (*GetMessageByIdResponse) Descriptor() ([]byte, []int) {
+	return file_v1_service_service_proto_rawDescGZIP(), []int{9}
+}
+
+func (x *GetMessageByIdResponse) GetMessage() *entity.Message {
+	if x != nil {
+		return x.Message
+	}
+	return nil
+}
+
+type ConfirmReceiveRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	MessageIds    []int64                `protobuf:"varint,1,rep,packed,name=messageIds,proto3" json:"messageIds,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ConfirmReceiveRequest) Reset() {
+	*x = ConfirmReceiveRequest{}
+	mi := &file_v1_service_service_proto_msgTypes[10]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ConfirmReceiveRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ConfirmReceiveRequest) ProtoMessage() {}
+
+func (x *ConfirmReceiveRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_v1_service_service_proto_msgTypes[10]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ConfirmReceiveRequest.ProtoReflect.Descriptor instead.
+func (*ConfirmReceiveRequest) Descriptor() ([]byte, []int) {
+	return file_v1_service_service_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *ConfirmReceiveRequest) GetMessageIds() []int64 {
+	if x != nil {
+		return x.MessageIds
+	}
+	return nil
+}
+
+type ConfirmReceiveResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ConfirmReceiveResponse) Reset() {
+	*x = ConfirmReceiveResponse{}
+	mi := &file_v1_service_service_proto_msgTypes[11]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ConfirmReceiveResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ConfirmReceiveResponse) ProtoMessage() {}
+
+func (x *ConfirmReceiveResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_v1_service_service_proto_msgTypes[11]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ConfirmReceiveResponse.ProtoReflect.Descriptor instead.
+func (*ConfirmReceiveResponse) Descriptor() ([]byte, []int) {
+	return file_v1_service_service_proto_rawDescGZIP(), []int{11}
+}
+
 var File_v1_service_service_proto protoreflect.FileDescriptor
 
 const file_v1_service_service_proto_rawDesc = "" +
 	"\n" +
-	"\x18v1/service/service.proto\x12\x18pro.yarns.api.v1.service\x1a\x14v1/entity/user.proto\x1a\x17v1/entity/message.proto\"/\n" +
+	"\x18v1/service/service.proto\x12\x18pro.yarns.api.v1.service\x1a\x14v1/entity/user.proto\x1a\x17v1/entity/message.proto\x1a\x1cv1/entity/message_type.proto\"/\n" +
 	"\x0fRegisterRequest\x12\x1c\n" +
 	"\tpublicKey\x18\x01 \x01(\fR\tpublicKey\"E\n" +
 	"\x10RegisterResponse\x121\n" +
@@ -210,11 +578,35 @@ const file_v1_service_service_proto_rawDesc = "" +
 	"\x12GetUserByIdRequest\x12\x16\n" +
 	"\x06userId\x18\x01 \x01(\x03R\x06userId\"H\n" +
 	"\x13GetUserByIdResponse\x121\n" +
-	"\x04user\x18\x01 \x01(\v2\x1d.pro.yarns.api.v1.entity.UserR\x04user2\xdb\x01\n" +
+	"\x04user\x18\x01 \x01(\v2\x1d.pro.yarns.api.v1.entity.UserR\x04user\"\xb2\x01\n" +
+	"\x12SendMessageRequest\x12\x0e\n" +
+	"\x02to\x18\x01 \x01(\x03R\x02to\x128\n" +
+	"\x04type\x18\x02 \x01(\x0e2$.pro.yarns.api.v1.entity.MessageTypeR\x04type\x12,\n" +
+	"\x11encryptedMetadata\x18\x03 \x01(\fR\x11encryptedMetadata\x12$\n" +
+	"\rencryptedBody\x18\x04 \x01(\fR\rencryptedBody\"3\n" +
+	"\x13SendMessageResponse\x12\x1c\n" +
+	"\tmessageId\x18\x01 \x01(\x03R\tmessageId\"<\n" +
+	"\x14CheckMessagesRequest\x12$\n" +
+	"\rlastMessageId\x18\x01 \x01(\x03R\rlastMessageId\"U\n" +
+	"\x15CheckMessagesResponse\x12<\n" +
+	"\bmessages\x18\x01 \x03(\v2 .pro.yarns.api.v1.entity.MessageR\bmessages\"5\n" +
+	"\x15GetMessageByIdRequest\x12\x1c\n" +
+	"\tmessageId\x18\x01 \x01(\x03R\tmessageId\"T\n" +
+	"\x16GetMessageByIdResponse\x12:\n" +
+	"\amessage\x18\x01 \x01(\v2 .pro.yarns.api.v1.entity.MessageR\amessage\"7\n" +
+	"\x15ConfirmReceiveRequest\x12\x1e\n" +
+	"\n" +
+	"messageIds\x18\x01 \x03(\x03R\n" +
+	"messageIds\"\x18\n" +
+	"\x16ConfirmReceiveResponse2\xa3\x05\n" +
 	"\n" +
 	"YarnsApiV1\x12a\n" +
 	"\bRegister\x12).pro.yarns.api.v1.service.RegisterRequest\x1a*.pro.yarns.api.v1.service.RegisterResponse\x12j\n" +
-	"\vGetUserById\x12,.pro.yarns.api.v1.service.GetUserByIdRequest\x1a-.pro.yarns.api.v1.service.GetUserByIdResponseBV\n" +
+	"\vGetUserById\x12,.pro.yarns.api.v1.service.GetUserByIdRequest\x1a-.pro.yarns.api.v1.service.GetUserByIdResponse\x12j\n" +
+	"\vSendMessage\x12,.pro.yarns.api.v1.service.SendMessageRequest\x1a-.pro.yarns.api.v1.service.SendMessageResponse\x12p\n" +
+	"\rCheckMessages\x12..pro.yarns.api.v1.service.CheckMessagesRequest\x1a/.pro.yarns.api.v1.service.CheckMessagesResponse\x12s\n" +
+	"\x0eGetMessageById\x12/.pro.yarns.api.v1.service.GetMessageByIdRequest\x1a0.pro.yarns.api.v1.service.GetMessageByIdResponse\x12s\n" +
+	"\x0eConfirmReceive\x12/.pro.yarns.api.v1.service.ConfirmReceiveRequest\x1a0.pro.yarns.api.v1.service.ConfirmReceiveResponseBV\n" +
 	"\x18pro.yarns.api.v1.serviceB\fServiceProtoP\x01Z*github.com/yarns-pro/api/pkg/go/v1/serviceb\x06proto3"
 
 var (
@@ -229,26 +621,47 @@ func file_v1_service_service_proto_rawDescGZIP() []byte {
 	return file_v1_service_service_proto_rawDescData
 }
 
-var file_v1_service_service_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_v1_service_service_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
 var file_v1_service_service_proto_goTypes = []any{
-	(*RegisterRequest)(nil),     // 0: pro.yarns.api.v1.service.RegisterRequest
-	(*RegisterResponse)(nil),    // 1: pro.yarns.api.v1.service.RegisterResponse
-	(*GetUserByIdRequest)(nil),  // 2: pro.yarns.api.v1.service.GetUserByIdRequest
-	(*GetUserByIdResponse)(nil), // 3: pro.yarns.api.v1.service.GetUserByIdResponse
-	(*entity.User)(nil),         // 4: pro.yarns.api.v1.entity.User
+	(*RegisterRequest)(nil),        // 0: pro.yarns.api.v1.service.RegisterRequest
+	(*RegisterResponse)(nil),       // 1: pro.yarns.api.v1.service.RegisterResponse
+	(*GetUserByIdRequest)(nil),     // 2: pro.yarns.api.v1.service.GetUserByIdRequest
+	(*GetUserByIdResponse)(nil),    // 3: pro.yarns.api.v1.service.GetUserByIdResponse
+	(*SendMessageRequest)(nil),     // 4: pro.yarns.api.v1.service.SendMessageRequest
+	(*SendMessageResponse)(nil),    // 5: pro.yarns.api.v1.service.SendMessageResponse
+	(*CheckMessagesRequest)(nil),   // 6: pro.yarns.api.v1.service.CheckMessagesRequest
+	(*CheckMessagesResponse)(nil),  // 7: pro.yarns.api.v1.service.CheckMessagesResponse
+	(*GetMessageByIdRequest)(nil),  // 8: pro.yarns.api.v1.service.GetMessageByIdRequest
+	(*GetMessageByIdResponse)(nil), // 9: pro.yarns.api.v1.service.GetMessageByIdResponse
+	(*ConfirmReceiveRequest)(nil),  // 10: pro.yarns.api.v1.service.ConfirmReceiveRequest
+	(*ConfirmReceiveResponse)(nil), // 11: pro.yarns.api.v1.service.ConfirmReceiveResponse
+	(*entity.User)(nil),            // 12: pro.yarns.api.v1.entity.User
+	(entity.MessageType)(0),        // 13: pro.yarns.api.v1.entity.MessageType
+	(*entity.Message)(nil),         // 14: pro.yarns.api.v1.entity.Message
 }
 var file_v1_service_service_proto_depIdxs = []int32{
-	4, // 0: pro.yarns.api.v1.service.RegisterResponse.user:type_name -> pro.yarns.api.v1.entity.User
-	4, // 1: pro.yarns.api.v1.service.GetUserByIdResponse.user:type_name -> pro.yarns.api.v1.entity.User
-	0, // 2: pro.yarns.api.v1.service.YarnsApiV1.Register:input_type -> pro.yarns.api.v1.service.RegisterRequest
-	2, // 3: pro.yarns.api.v1.service.YarnsApiV1.GetUserById:input_type -> pro.yarns.api.v1.service.GetUserByIdRequest
-	1, // 4: pro.yarns.api.v1.service.YarnsApiV1.Register:output_type -> pro.yarns.api.v1.service.RegisterResponse
-	3, // 5: pro.yarns.api.v1.service.YarnsApiV1.GetUserById:output_type -> pro.yarns.api.v1.service.GetUserByIdResponse
-	4, // [4:6] is the sub-list for method output_type
-	2, // [2:4] is the sub-list for method input_type
-	2, // [2:2] is the sub-list for extension type_name
-	2, // [2:2] is the sub-list for extension extendee
-	0, // [0:2] is the sub-list for field type_name
+	12, // 0: pro.yarns.api.v1.service.RegisterResponse.user:type_name -> pro.yarns.api.v1.entity.User
+	12, // 1: pro.yarns.api.v1.service.GetUserByIdResponse.user:type_name -> pro.yarns.api.v1.entity.User
+	13, // 2: pro.yarns.api.v1.service.SendMessageRequest.type:type_name -> pro.yarns.api.v1.entity.MessageType
+	14, // 3: pro.yarns.api.v1.service.CheckMessagesResponse.messages:type_name -> pro.yarns.api.v1.entity.Message
+	14, // 4: pro.yarns.api.v1.service.GetMessageByIdResponse.message:type_name -> pro.yarns.api.v1.entity.Message
+	0,  // 5: pro.yarns.api.v1.service.YarnsApiV1.Register:input_type -> pro.yarns.api.v1.service.RegisterRequest
+	2,  // 6: pro.yarns.api.v1.service.YarnsApiV1.GetUserById:input_type -> pro.yarns.api.v1.service.GetUserByIdRequest
+	4,  // 7: pro.yarns.api.v1.service.YarnsApiV1.SendMessage:input_type -> pro.yarns.api.v1.service.SendMessageRequest
+	6,  // 8: pro.yarns.api.v1.service.YarnsApiV1.CheckMessages:input_type -> pro.yarns.api.v1.service.CheckMessagesRequest
+	8,  // 9: pro.yarns.api.v1.service.YarnsApiV1.GetMessageById:input_type -> pro.yarns.api.v1.service.GetMessageByIdRequest
+	10, // 10: pro.yarns.api.v1.service.YarnsApiV1.ConfirmReceive:input_type -> pro.yarns.api.v1.service.ConfirmReceiveRequest
+	1,  // 11: pro.yarns.api.v1.service.YarnsApiV1.Register:output_type -> pro.yarns.api.v1.service.RegisterResponse
+	3,  // 12: pro.yarns.api.v1.service.YarnsApiV1.GetUserById:output_type -> pro.yarns.api.v1.service.GetUserByIdResponse
+	5,  // 13: pro.yarns.api.v1.service.YarnsApiV1.SendMessage:output_type -> pro.yarns.api.v1.service.SendMessageResponse
+	7,  // 14: pro.yarns.api.v1.service.YarnsApiV1.CheckMessages:output_type -> pro.yarns.api.v1.service.CheckMessagesResponse
+	9,  // 15: pro.yarns.api.v1.service.YarnsApiV1.GetMessageById:output_type -> pro.yarns.api.v1.service.GetMessageByIdResponse
+	11, // 16: pro.yarns.api.v1.service.YarnsApiV1.ConfirmReceive:output_type -> pro.yarns.api.v1.service.ConfirmReceiveResponse
+	11, // [11:17] is the sub-list for method output_type
+	5,  // [5:11] is the sub-list for method input_type
+	5,  // [5:5] is the sub-list for extension type_name
+	5,  // [5:5] is the sub-list for extension extendee
+	0,  // [0:5] is the sub-list for field type_name
 }
 
 func init() { file_v1_service_service_proto_init() }
@@ -262,7 +675,7 @@ func file_v1_service_service_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_v1_service_service_proto_rawDesc), len(file_v1_service_service_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   12,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

@@ -40,6 +40,22 @@ public object YarnsApiV1GrpcKt {
     @JvmStatic
     get() = YarnsApiV1Grpc.getGetUserByIdMethod()
 
+  public val sendMessageMethod: MethodDescriptor<SendMessageRequest, SendMessageResponse>
+    @JvmStatic
+    get() = YarnsApiV1Grpc.getSendMessageMethod()
+
+  public val checkMessagesMethod: MethodDescriptor<CheckMessagesRequest, CheckMessagesResponse>
+    @JvmStatic
+    get() = YarnsApiV1Grpc.getCheckMessagesMethod()
+
+  public val getMessageByIdMethod: MethodDescriptor<GetMessageByIdRequest, GetMessageByIdResponse>
+    @JvmStatic
+    get() = YarnsApiV1Grpc.getGetMessageByIdMethod()
+
+  public val confirmReceiveMethod: MethodDescriptor<ConfirmReceiveRequest, ConfirmReceiveResponse>
+    @JvmStatic
+    get() = YarnsApiV1Grpc.getConfirmReceiveMethod()
+
   /**
    * A stub for issuing RPCs to a(n) pro.yarns.api.v1.service.YarnsApiV1 service as suspending
    * coroutines.
@@ -95,6 +111,94 @@ public object YarnsApiV1GrpcKt {
       callOptions,
       headers
     )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun sendMessage(request: SendMessageRequest, headers: Metadata = Metadata()):
+        SendMessageResponse = unaryRpc(
+      channel,
+      YarnsApiV1Grpc.getSendMessageMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun checkMessages(request: CheckMessagesRequest, headers: Metadata = Metadata()):
+        CheckMessagesResponse = unaryRpc(
+      channel,
+      YarnsApiV1Grpc.getCheckMessagesMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun getMessageById(request: GetMessageByIdRequest, headers: Metadata =
+        Metadata()): GetMessageByIdResponse = unaryRpc(
+      channel,
+      YarnsApiV1Grpc.getGetMessageByIdMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun confirmReceive(request: ConfirmReceiveRequest, headers: Metadata =
+        Metadata()): ConfirmReceiveResponse = unaryRpc(
+      channel,
+      YarnsApiV1Grpc.getConfirmReceiveMethod(),
+      request,
+      callOptions,
+      headers
+    )
   }
 
   /**
@@ -132,6 +236,65 @@ public object YarnsApiV1GrpcKt {
     public open suspend fun getUserById(request: GetUserByIdRequest): GetUserByIdResponse = throw
         StatusException(UNIMPLEMENTED.withDescription("Method pro.yarns.api.v1.service.YarnsApiV1.GetUserById is unimplemented"))
 
+    /**
+     * Returns the response to an RPC for pro.yarns.api.v1.service.YarnsApiV1.SendMessage.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
+     * the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun sendMessage(request: SendMessageRequest): SendMessageResponse = throw
+        StatusException(UNIMPLEMENTED.withDescription("Method pro.yarns.api.v1.service.YarnsApiV1.SendMessage is unimplemented"))
+
+    /**
+     * Returns the response to an RPC for pro.yarns.api.v1.service.YarnsApiV1.CheckMessages.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
+     * the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun checkMessages(request: CheckMessagesRequest): CheckMessagesResponse =
+        throw
+        StatusException(UNIMPLEMENTED.withDescription("Method pro.yarns.api.v1.service.YarnsApiV1.CheckMessages is unimplemented"))
+
+    /**
+     * Returns the response to an RPC for pro.yarns.api.v1.service.YarnsApiV1.GetMessageById.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
+     * the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun getMessageById(request: GetMessageByIdRequest): GetMessageByIdResponse =
+        throw
+        StatusException(UNIMPLEMENTED.withDescription("Method pro.yarns.api.v1.service.YarnsApiV1.GetMessageById is unimplemented"))
+
+    /**
+     * Returns the response to an RPC for pro.yarns.api.v1.service.YarnsApiV1.ConfirmReceive.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
+     * the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun confirmReceive(request: ConfirmReceiveRequest): ConfirmReceiveResponse =
+        throw
+        StatusException(UNIMPLEMENTED.withDescription("Method pro.yarns.api.v1.service.YarnsApiV1.ConfirmReceive is unimplemented"))
+
     final override fun bindService(): ServerServiceDefinition = builder(getServiceDescriptor())
       .addMethod(unaryServerMethodDefinition(
       context = this.context,
@@ -142,6 +305,26 @@ public object YarnsApiV1GrpcKt {
       context = this.context,
       descriptor = YarnsApiV1Grpc.getGetUserByIdMethod(),
       implementation = ::getUserById
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = YarnsApiV1Grpc.getSendMessageMethod(),
+      implementation = ::sendMessage
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = YarnsApiV1Grpc.getCheckMessagesMethod(),
+      implementation = ::checkMessages
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = YarnsApiV1Grpc.getGetMessageByIdMethod(),
+      implementation = ::getMessageById
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = YarnsApiV1Grpc.getConfirmReceiveMethod(),
+      implementation = ::confirmReceive
     )).build()
   }
 }

@@ -77,6 +77,130 @@ public final class YarnsApiV1Grpc {
     return getGetUserByIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<pro.yarns.api.v1.service.SendMessageRequest,
+      pro.yarns.api.v1.service.SendMessageResponse> getSendMessageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SendMessage",
+      requestType = pro.yarns.api.v1.service.SendMessageRequest.class,
+      responseType = pro.yarns.api.v1.service.SendMessageResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<pro.yarns.api.v1.service.SendMessageRequest,
+      pro.yarns.api.v1.service.SendMessageResponse> getSendMessageMethod() {
+    io.grpc.MethodDescriptor<pro.yarns.api.v1.service.SendMessageRequest, pro.yarns.api.v1.service.SendMessageResponse> getSendMessageMethod;
+    if ((getSendMessageMethod = YarnsApiV1Grpc.getSendMessageMethod) == null) {
+      synchronized (YarnsApiV1Grpc.class) {
+        if ((getSendMessageMethod = YarnsApiV1Grpc.getSendMessageMethod) == null) {
+          YarnsApiV1Grpc.getSendMessageMethod = getSendMessageMethod =
+              io.grpc.MethodDescriptor.<pro.yarns.api.v1.service.SendMessageRequest, pro.yarns.api.v1.service.SendMessageResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendMessage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  pro.yarns.api.v1.service.SendMessageRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  pro.yarns.api.v1.service.SendMessageResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new YarnsApiV1MethodDescriptorSupplier("SendMessage"))
+              .build();
+        }
+      }
+    }
+    return getSendMessageMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<pro.yarns.api.v1.service.CheckMessagesRequest,
+      pro.yarns.api.v1.service.CheckMessagesResponse> getCheckMessagesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CheckMessages",
+      requestType = pro.yarns.api.v1.service.CheckMessagesRequest.class,
+      responseType = pro.yarns.api.v1.service.CheckMessagesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<pro.yarns.api.v1.service.CheckMessagesRequest,
+      pro.yarns.api.v1.service.CheckMessagesResponse> getCheckMessagesMethod() {
+    io.grpc.MethodDescriptor<pro.yarns.api.v1.service.CheckMessagesRequest, pro.yarns.api.v1.service.CheckMessagesResponse> getCheckMessagesMethod;
+    if ((getCheckMessagesMethod = YarnsApiV1Grpc.getCheckMessagesMethod) == null) {
+      synchronized (YarnsApiV1Grpc.class) {
+        if ((getCheckMessagesMethod = YarnsApiV1Grpc.getCheckMessagesMethod) == null) {
+          YarnsApiV1Grpc.getCheckMessagesMethod = getCheckMessagesMethod =
+              io.grpc.MethodDescriptor.<pro.yarns.api.v1.service.CheckMessagesRequest, pro.yarns.api.v1.service.CheckMessagesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CheckMessages"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  pro.yarns.api.v1.service.CheckMessagesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  pro.yarns.api.v1.service.CheckMessagesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new YarnsApiV1MethodDescriptorSupplier("CheckMessages"))
+              .build();
+        }
+      }
+    }
+    return getCheckMessagesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<pro.yarns.api.v1.service.GetMessageByIdRequest,
+      pro.yarns.api.v1.service.GetMessageByIdResponse> getGetMessageByIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetMessageById",
+      requestType = pro.yarns.api.v1.service.GetMessageByIdRequest.class,
+      responseType = pro.yarns.api.v1.service.GetMessageByIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<pro.yarns.api.v1.service.GetMessageByIdRequest,
+      pro.yarns.api.v1.service.GetMessageByIdResponse> getGetMessageByIdMethod() {
+    io.grpc.MethodDescriptor<pro.yarns.api.v1.service.GetMessageByIdRequest, pro.yarns.api.v1.service.GetMessageByIdResponse> getGetMessageByIdMethod;
+    if ((getGetMessageByIdMethod = YarnsApiV1Grpc.getGetMessageByIdMethod) == null) {
+      synchronized (YarnsApiV1Grpc.class) {
+        if ((getGetMessageByIdMethod = YarnsApiV1Grpc.getGetMessageByIdMethod) == null) {
+          YarnsApiV1Grpc.getGetMessageByIdMethod = getGetMessageByIdMethod =
+              io.grpc.MethodDescriptor.<pro.yarns.api.v1.service.GetMessageByIdRequest, pro.yarns.api.v1.service.GetMessageByIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMessageById"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  pro.yarns.api.v1.service.GetMessageByIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  pro.yarns.api.v1.service.GetMessageByIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new YarnsApiV1MethodDescriptorSupplier("GetMessageById"))
+              .build();
+        }
+      }
+    }
+    return getGetMessageByIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<pro.yarns.api.v1.service.ConfirmReceiveRequest,
+      pro.yarns.api.v1.service.ConfirmReceiveResponse> getConfirmReceiveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ConfirmReceive",
+      requestType = pro.yarns.api.v1.service.ConfirmReceiveRequest.class,
+      responseType = pro.yarns.api.v1.service.ConfirmReceiveResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<pro.yarns.api.v1.service.ConfirmReceiveRequest,
+      pro.yarns.api.v1.service.ConfirmReceiveResponse> getConfirmReceiveMethod() {
+    io.grpc.MethodDescriptor<pro.yarns.api.v1.service.ConfirmReceiveRequest, pro.yarns.api.v1.service.ConfirmReceiveResponse> getConfirmReceiveMethod;
+    if ((getConfirmReceiveMethod = YarnsApiV1Grpc.getConfirmReceiveMethod) == null) {
+      synchronized (YarnsApiV1Grpc.class) {
+        if ((getConfirmReceiveMethod = YarnsApiV1Grpc.getConfirmReceiveMethod) == null) {
+          YarnsApiV1Grpc.getConfirmReceiveMethod = getConfirmReceiveMethod =
+              io.grpc.MethodDescriptor.<pro.yarns.api.v1.service.ConfirmReceiveRequest, pro.yarns.api.v1.service.ConfirmReceiveResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ConfirmReceive"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  pro.yarns.api.v1.service.ConfirmReceiveRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  pro.yarns.api.v1.service.ConfirmReceiveResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new YarnsApiV1MethodDescriptorSupplier("ConfirmReceive"))
+              .build();
+        }
+      }
+    }
+    return getConfirmReceiveMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -153,6 +277,34 @@ public final class YarnsApiV1Grpc {
         io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.GetUserByIdResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserByIdMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void sendMessage(pro.yarns.api.v1.service.SendMessageRequest request,
+        io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.SendMessageResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendMessageMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void checkMessages(pro.yarns.api.v1.service.CheckMessagesRequest request,
+        io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.CheckMessagesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCheckMessagesMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getMessageById(pro.yarns.api.v1.service.GetMessageByIdRequest request,
+        io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.GetMessageByIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMessageByIdMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void confirmReceive(pro.yarns.api.v1.service.ConfirmReceiveRequest request,
+        io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.ConfirmReceiveResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getConfirmReceiveMethod(), responseObserver);
+    }
   }
 
   /**
@@ -197,6 +349,38 @@ public final class YarnsApiV1Grpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetUserByIdMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void sendMessage(pro.yarns.api.v1.service.SendMessageRequest request,
+        io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.SendMessageResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSendMessageMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void checkMessages(pro.yarns.api.v1.service.CheckMessagesRequest request,
+        io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.CheckMessagesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCheckMessagesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getMessageById(pro.yarns.api.v1.service.GetMessageByIdRequest request,
+        io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.GetMessageByIdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetMessageByIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void confirmReceive(pro.yarns.api.v1.service.ConfirmReceiveRequest request,
+        io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.ConfirmReceiveResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getConfirmReceiveMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -228,6 +412,34 @@ public final class YarnsApiV1Grpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetUserByIdMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public pro.yarns.api.v1.service.SendMessageResponse sendMessage(pro.yarns.api.v1.service.SendMessageRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSendMessageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public pro.yarns.api.v1.service.CheckMessagesResponse checkMessages(pro.yarns.api.v1.service.CheckMessagesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCheckMessagesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public pro.yarns.api.v1.service.GetMessageByIdResponse getMessageById(pro.yarns.api.v1.service.GetMessageByIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetMessageByIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public pro.yarns.api.v1.service.ConfirmReceiveResponse confirmReceive(pro.yarns.api.v1.service.ConfirmReceiveRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getConfirmReceiveMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -258,6 +470,34 @@ public final class YarnsApiV1Grpc {
     public pro.yarns.api.v1.service.GetUserByIdResponse getUserById(pro.yarns.api.v1.service.GetUserByIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetUserByIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public pro.yarns.api.v1.service.SendMessageResponse sendMessage(pro.yarns.api.v1.service.SendMessageRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSendMessageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public pro.yarns.api.v1.service.CheckMessagesResponse checkMessages(pro.yarns.api.v1.service.CheckMessagesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCheckMessagesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public pro.yarns.api.v1.service.GetMessageByIdResponse getMessageById(pro.yarns.api.v1.service.GetMessageByIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetMessageByIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public pro.yarns.api.v1.service.ConfirmReceiveResponse confirmReceive(pro.yarns.api.v1.service.ConfirmReceiveRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getConfirmReceiveMethod(), getCallOptions(), request);
     }
   }
 
@@ -292,10 +532,46 @@ public final class YarnsApiV1Grpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetUserByIdMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<pro.yarns.api.v1.service.SendMessageResponse> sendMessage(
+        pro.yarns.api.v1.service.SendMessageRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSendMessageMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<pro.yarns.api.v1.service.CheckMessagesResponse> checkMessages(
+        pro.yarns.api.v1.service.CheckMessagesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCheckMessagesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<pro.yarns.api.v1.service.GetMessageByIdResponse> getMessageById(
+        pro.yarns.api.v1.service.GetMessageByIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetMessageByIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<pro.yarns.api.v1.service.ConfirmReceiveResponse> confirmReceive(
+        pro.yarns.api.v1.service.ConfirmReceiveRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getConfirmReceiveMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REGISTER = 0;
   private static final int METHODID_GET_USER_BY_ID = 1;
+  private static final int METHODID_SEND_MESSAGE = 2;
+  private static final int METHODID_CHECK_MESSAGES = 3;
+  private static final int METHODID_GET_MESSAGE_BY_ID = 4;
+  private static final int METHODID_CONFIRM_RECEIVE = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -321,6 +597,22 @@ public final class YarnsApiV1Grpc {
         case METHODID_GET_USER_BY_ID:
           serviceImpl.getUserById((pro.yarns.api.v1.service.GetUserByIdRequest) request,
               (io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.GetUserByIdResponse>) responseObserver);
+          break;
+        case METHODID_SEND_MESSAGE:
+          serviceImpl.sendMessage((pro.yarns.api.v1.service.SendMessageRequest) request,
+              (io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.SendMessageResponse>) responseObserver);
+          break;
+        case METHODID_CHECK_MESSAGES:
+          serviceImpl.checkMessages((pro.yarns.api.v1.service.CheckMessagesRequest) request,
+              (io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.CheckMessagesResponse>) responseObserver);
+          break;
+        case METHODID_GET_MESSAGE_BY_ID:
+          serviceImpl.getMessageById((pro.yarns.api.v1.service.GetMessageByIdRequest) request,
+              (io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.GetMessageByIdResponse>) responseObserver);
+          break;
+        case METHODID_CONFIRM_RECEIVE:
+          serviceImpl.confirmReceive((pro.yarns.api.v1.service.ConfirmReceiveRequest) request,
+              (io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.ConfirmReceiveResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -354,6 +646,34 @@ public final class YarnsApiV1Grpc {
               pro.yarns.api.v1.service.GetUserByIdRequest,
               pro.yarns.api.v1.service.GetUserByIdResponse>(
                 service, METHODID_GET_USER_BY_ID)))
+        .addMethod(
+          getSendMessageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              pro.yarns.api.v1.service.SendMessageRequest,
+              pro.yarns.api.v1.service.SendMessageResponse>(
+                service, METHODID_SEND_MESSAGE)))
+        .addMethod(
+          getCheckMessagesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              pro.yarns.api.v1.service.CheckMessagesRequest,
+              pro.yarns.api.v1.service.CheckMessagesResponse>(
+                service, METHODID_CHECK_MESSAGES)))
+        .addMethod(
+          getGetMessageByIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              pro.yarns.api.v1.service.GetMessageByIdRequest,
+              pro.yarns.api.v1.service.GetMessageByIdResponse>(
+                service, METHODID_GET_MESSAGE_BY_ID)))
+        .addMethod(
+          getConfirmReceiveMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              pro.yarns.api.v1.service.ConfirmReceiveRequest,
+              pro.yarns.api.v1.service.ConfirmReceiveResponse>(
+                service, METHODID_CONFIRM_RECEIVE)))
         .build();
   }
 
@@ -404,6 +724,10 @@ public final class YarnsApiV1Grpc {
               .setSchemaDescriptor(new YarnsApiV1FileDescriptorSupplier())
               .addMethod(getRegisterMethod())
               .addMethod(getGetUserByIdMethod())
+              .addMethod(getSendMessageMethod())
+              .addMethod(getCheckMessagesMethod())
+              .addMethod(getGetMessageByIdMethod())
+              .addMethod(getConfirmReceiveMethod())
               .build();
         }
       }
