@@ -8,4 +8,6 @@ message MessageMetadata {
   string mimeType = 1;
   string filename = 2;
   int64 filesize = 3;
+  int32 storageId = 4;
+  string storageUrl = 5;
 }

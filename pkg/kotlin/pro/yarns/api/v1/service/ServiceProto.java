@@ -27,15 +27,15 @@ public final class ServiceProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pro_yarns_api_v1_service_RegisterRequest_descriptor;
+    internal_static_pro_yarns_api_v1_service_RegisterUserRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pro_yarns_api_v1_service_RegisterRequest_fieldAccessorTable;
+      internal_static_pro_yarns_api_v1_service_RegisterUserRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pro_yarns_api_v1_service_RegisterResponse_descriptor;
+    internal_static_pro_yarns_api_v1_service_RegisterUserResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pro_yarns_api_v1_service_RegisterResponse_fieldAccessorTable;
+      internal_static_pro_yarns_api_v1_service_RegisterUserResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pro_yarns_api_v1_service_GetUserByIdRequest_descriptor;
   static final 
@@ -67,25 +67,15 @@ public final class ServiceProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_pro_yarns_api_v1_service_CheckMessagesResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pro_yarns_api_v1_service_GetMessageByIdRequest_descriptor;
+    internal_static_pro_yarns_api_v1_service_ConfirmMessagesRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pro_yarns_api_v1_service_GetMessageByIdRequest_fieldAccessorTable;
+      internal_static_pro_yarns_api_v1_service_ConfirmMessagesRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pro_yarns_api_v1_service_GetMessageByIdResponse_descriptor;
+    internal_static_pro_yarns_api_v1_service_ConfirmMessagesResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pro_yarns_api_v1_service_GetMessageByIdResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pro_yarns_api_v1_service_ConfirmReceiveRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pro_yarns_api_v1_service_ConfirmReceiveRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pro_yarns_api_v1_service_ConfirmReceiveResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pro_yarns_api_v1_service_ConfirmReceiveResponse_fieldAccessorTable;
+      internal_static_pro_yarns_api_v1_service_ConfirmMessagesResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -98,47 +88,41 @@ public final class ServiceProto {
       "\n\030v1/service/service.proto\022\030pro.yarns.ap" +
       "i.v1.service\032\024v1/entity/user.proto\032\027v1/e" +
       "ntity/message.proto\032\034v1/entity/message_t" +
-      "ype.proto\"/\n\017RegisterRequest\022\034\n\tpublicKe" +
-      "y\030\001 \001(\014R\tpublicKey\"E\n\020RegisterResponse\0221" +
-      "\n\004user\030\001 \001(\0132\035.pro.yarns.api.v1.entity.U" +
-      "serR\004user\",\n\022GetUserByIdRequest\022\026\n\006userI" +
-      "d\030\001 \001(\003R\006userId\"H\n\023GetUserByIdResponse\0221" +
-      "\n\004user\030\001 \001(\0132\035.pro.yarns.api.v1.entity.U" +
-      "serR\004user\"\262\001\n\022SendMessageRequest\022\016\n\002to\030\001" +
-      " \001(\003R\002to\0228\n\004type\030\002 \001(\0162$.pro.yarns.api.v" +
-      "1.entity.MessageTypeR\004type\022,\n\021encryptedM" +
-      "etadata\030\003 \001(\014R\021encryptedMetadata\022$\n\rencr" +
-      "yptedBody\030\004 \001(\014R\rencryptedBody\"3\n\023SendMe" +
-      "ssageResponse\022\034\n\tmessageId\030\001 \001(\003R\tmessag" +
-      "eId\"<\n\024CheckMessagesRequest\022$\n\rlastMessa" +
-      "geId\030\001 \001(\003R\rlastMessageId\"U\n\025CheckMessag" +
-      "esResponse\022<\n\010messages\030\001 \003(\0132 .pro.yarns" +
-      ".api.v1.entity.MessageR\010messages\"5\n\025GetM" +
-      "essageByIdRequest\022\034\n\tmessageId\030\001 \001(\003R\tme" +
-      "ssageId\"T\n\026GetMessageByIdResponse\022:\n\007mes" +
-      "sage\030\001 \001(\0132 .pro.yarns.api.v1.entity.Mes" +
-      "sageR\007message\"7\n\025ConfirmReceiveRequest\022\036" +
-      "\n\nmessageIds\030\001 \003(\003R\nmessageIds\"\030\n\026Confir" +
-      "mReceiveResponse2\243\005\n\nYarnsApiV1\022a\n\010Regis" +
-      "ter\022).pro.yarns.api.v1.service.RegisterR" +
-      "equest\032*.pro.yarns.api.v1.service.Regist" +
-      "erResponse\022j\n\013GetUserById\022,.pro.yarns.ap" +
-      "i.v1.service.GetUserByIdRequest\032-.pro.ya" +
-      "rns.api.v1.service.GetUserByIdResponse\022j" +
-      "\n\013SendMessage\022,.pro.yarns.api.v1.service" +
-      ".SendMessageRequest\032-.pro.yarns.api.v1.s" +
-      "ervice.SendMessageResponse\022p\n\rCheckMessa" +
-      "ges\022..pro.yarns.api.v1.service.CheckMess" +
-      "agesRequest\032/.pro.yarns.api.v1.service.C" +
-      "heckMessagesResponse\022s\n\016GetMessageById\022/" +
-      ".pro.yarns.api.v1.service.GetMessageById" +
-      "Request\0320.pro.yarns.api.v1.service.GetMe" +
-      "ssageByIdResponse\022s\n\016ConfirmReceive\022/.pr" +
-      "o.yarns.api.v1.service.ConfirmReceiveReq" +
-      "uest\0320.pro.yarns.api.v1.service.ConfirmR" +
-      "eceiveResponseBV\n\030pro.yarns.api.v1.servi" +
-      "ceB\014ServiceProtoP\001Z*github.com/yarns-pro" +
-      "/api/pkg/go/v1/serviceb\006proto3"
+      "ype.proto\"3\n\023RegisterUserRequest\022\034\n\tpubl" +
+      "icKey\030\001 \001(\014R\tpublicKey\"I\n\024RegisterUserRe" +
+      "sponse\0221\n\004user\030\001 \001(\0132\035.pro.yarns.api.v1." +
+      "entity.UserR\004user\",\n\022GetUserByIdRequest\022" +
+      "\026\n\006userId\030\001 \001(\003R\006userId\"H\n\023GetUserByIdRe" +
+      "sponse\0221\n\004user\030\001 \001(\0132\035.pro.yarns.api.v1." +
+      "entity.UserR\004user\"\262\001\n\022SendMessageRequest" +
+      "\022\016\n\002to\030\001 \001(\003R\002to\0228\n\004type\030\002 \001(\0162$.pro.yar" +
+      "ns.api.v1.entity.MessageTypeR\004type\022,\n\021en" +
+      "cryptedMetadata\030\003 \001(\014R\021encryptedMetadata" +
+      "\022$\n\rencryptedBody\030\004 \001(\014R\rencryptedBody\"3" +
+      "\n\023SendMessageResponse\022\034\n\tmessageId\030\001 \001(\003" +
+      "R\tmessageId\"<\n\024CheckMessagesRequest\022$\n\rl" +
+      "astMessageId\030\001 \001(\003R\rlastMessageId\"U\n\025Che" +
+      "ckMessagesResponse\022<\n\010messages\030\001 \003(\0132 .p" +
+      "ro.yarns.api.v1.entity.MessageR\010messages" +
+      "\"8\n\026ConfirmMessagesRequest\022\036\n\nmessageIds" +
+      "\030\001 \003(\003R\nmessageIds\"\031\n\027ConfirmMessagesRes" +
+      "ponse2\275\004\n\nYarnsApiV1\022m\n\014RegisterUser\022-.p" +
+      "ro.yarns.api.v1.service.RegisterUserRequ" +
+      "est\032..pro.yarns.api.v1.service.RegisterU" +
+      "serResponse\022j\n\013GetUserById\022,.pro.yarns.a" +
+      "pi.v1.service.GetUserByIdRequest\032-.pro.y" +
+      "arns.api.v1.service.GetUserByIdResponse\022" +
+      "j\n\013SendMessage\022,.pro.yarns.api.v1.servic" +
+      "e.SendMessageRequest\032-.pro.yarns.api.v1." +
+      "service.SendMessageResponse\022p\n\rCheckMess" +
+      "ages\022..pro.yarns.api.v1.service.CheckMes" +
+      "sagesRequest\032/.pro.yarns.api.v1.service." +
+      "CheckMessagesResponse\022v\n\017ConfirmMessages" +
+      "\0220.pro.yarns.api.v1.service.ConfirmMessa" +
+      "gesRequest\0321.pro.yarns.api.v1.service.Co" +
+      "nfirmMessagesResponseBV\n\030pro.yarns.api.v" +
+      "1.serviceB\014ServiceProtoP\001Z*github.com/ya" +
+      "rns-pro/api/pkg/go/v1/serviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -147,17 +131,17 @@ public final class ServiceProto {
           pro.yarns.api.v1.entity.MessageOuterClass.getDescriptor(),
           pro.yarns.api.v1.entity.MessageTypeOuterClass.getDescriptor(),
         });
-    internal_static_pro_yarns_api_v1_service_RegisterRequest_descriptor =
+    internal_static_pro_yarns_api_v1_service_RegisterUserRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_pro_yarns_api_v1_service_RegisterRequest_fieldAccessorTable = new
+    internal_static_pro_yarns_api_v1_service_RegisterUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pro_yarns_api_v1_service_RegisterRequest_descriptor,
+        internal_static_pro_yarns_api_v1_service_RegisterUserRequest_descriptor,
         new java.lang.String[] { "PublicKey", });
-    internal_static_pro_yarns_api_v1_service_RegisterResponse_descriptor =
+    internal_static_pro_yarns_api_v1_service_RegisterUserResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_pro_yarns_api_v1_service_RegisterResponse_fieldAccessorTable = new
+    internal_static_pro_yarns_api_v1_service_RegisterUserResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pro_yarns_api_v1_service_RegisterResponse_descriptor,
+        internal_static_pro_yarns_api_v1_service_RegisterUserResponse_descriptor,
         new java.lang.String[] { "User", });
     internal_static_pro_yarns_api_v1_service_GetUserByIdRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
@@ -195,29 +179,17 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_pro_yarns_api_v1_service_CheckMessagesResponse_descriptor,
         new java.lang.String[] { "Messages", });
-    internal_static_pro_yarns_api_v1_service_GetMessageByIdRequest_descriptor =
+    internal_static_pro_yarns_api_v1_service_ConfirmMessagesRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_pro_yarns_api_v1_service_GetMessageByIdRequest_fieldAccessorTable = new
+    internal_static_pro_yarns_api_v1_service_ConfirmMessagesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pro_yarns_api_v1_service_GetMessageByIdRequest_descriptor,
-        new java.lang.String[] { "MessageId", });
-    internal_static_pro_yarns_api_v1_service_GetMessageByIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_pro_yarns_api_v1_service_GetMessageByIdResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pro_yarns_api_v1_service_GetMessageByIdResponse_descriptor,
-        new java.lang.String[] { "Message", });
-    internal_static_pro_yarns_api_v1_service_ConfirmReceiveRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_pro_yarns_api_v1_service_ConfirmReceiveRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pro_yarns_api_v1_service_ConfirmReceiveRequest_descriptor,
+        internal_static_pro_yarns_api_v1_service_ConfirmMessagesRequest_descriptor,
         new java.lang.String[] { "MessageIds", });
-    internal_static_pro_yarns_api_v1_service_ConfirmReceiveResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_pro_yarns_api_v1_service_ConfirmReceiveResponse_fieldAccessorTable = new
+    internal_static_pro_yarns_api_v1_service_ConfirmMessagesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_pro_yarns_api_v1_service_ConfirmMessagesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pro_yarns_api_v1_service_ConfirmReceiveResponse_descriptor,
+        internal_static_pro_yarns_api_v1_service_ConfirmMessagesResponse_descriptor,
         new java.lang.String[] { });
     descriptor.resolveAllFeaturesImmutable();
     pro.yarns.api.v1.entity.UserOuterClass.getDescriptor();

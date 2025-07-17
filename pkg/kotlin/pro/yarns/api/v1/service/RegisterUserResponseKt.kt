@@ -6,27 +6,27 @@
 @file:Suppress("DEPRECATION")
 package pro.yarns.api.v1.service;
 
-@kotlin.jvm.JvmName("-initializeregisterResponse")
-public inline fun registerResponse(block: pro.yarns.api.v1.service.RegisterResponseKt.Dsl.() -> kotlin.Unit): pro.yarns.api.v1.service.RegisterResponse =
-  pro.yarns.api.v1.service.RegisterResponseKt.Dsl._create(pro.yarns.api.v1.service.RegisterResponse.newBuilder()).apply { block() }._build()
+@kotlin.jvm.JvmName("-initializeregisterUserResponse")
+public inline fun registerUserResponse(block: pro.yarns.api.v1.service.RegisterUserResponseKt.Dsl.() -> kotlin.Unit): pro.yarns.api.v1.service.RegisterUserResponse =
+  pro.yarns.api.v1.service.RegisterUserResponseKt.Dsl._create(pro.yarns.api.v1.service.RegisterUserResponse.newBuilder()).apply { block() }._build()
 /**
- * Protobuf type `pro.yarns.api.v1.service.RegisterResponse`
+ * Protobuf type `pro.yarns.api.v1.service.RegisterUserResponse`
  */
-public object RegisterResponseKt {
+public object RegisterUserResponseKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
   public class Dsl private constructor(
-    private val _builder: pro.yarns.api.v1.service.RegisterResponse.Builder
+    private val _builder: pro.yarns.api.v1.service.RegisterUserResponse.Builder
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
     @kotlin.PublishedApi
-      internal fun _create(builder: pro.yarns.api.v1.service.RegisterResponse.Builder): Dsl = Dsl(builder)
+      internal fun _create(builder: pro.yarns.api.v1.service.RegisterUserResponse.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
   @kotlin.PublishedApi
-    internal fun _build(): pro.yarns.api.v1.service.RegisterResponse = _builder.build()
+    internal fun _build(): pro.yarns.api.v1.service.RegisterUserResponse = _builder.build()
 
     /**
      * `.pro.yarns.api.v1.entity.User user = 1 [json_name = "user"];`
@@ -52,14 +52,14 @@ public object RegisterResponseKt {
       return _builder.hasUser()
     }
 
-    public val RegisterResponseKt.Dsl.userOrNull: pro.yarns.api.v1.entity.UserOuterClass.User?
+    public val RegisterUserResponseKt.Dsl.userOrNull: pro.yarns.api.v1.entity.UserOuterClass.User?
       get() = _builder.userOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun pro.yarns.api.v1.service.RegisterResponse.copy(block: `pro.yarns.api.v1.service`.RegisterResponseKt.Dsl.() -> kotlin.Unit): pro.yarns.api.v1.service.RegisterResponse =
-  `pro.yarns.api.v1.service`.RegisterResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+public inline fun pro.yarns.api.v1.service.RegisterUserResponse.copy(block: `pro.yarns.api.v1.service`.RegisterUserResponseKt.Dsl.() -> kotlin.Unit): pro.yarns.api.v1.service.RegisterUserResponse =
+  `pro.yarns.api.v1.service`.RegisterUserResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 
-public val pro.yarns.api.v1.service.RegisterResponseOrBuilder.userOrNull: pro.yarns.api.v1.entity.UserOuterClass.User?
+public val pro.yarns.api.v1.service.RegisterUserResponseOrBuilder.userOrNull: pro.yarns.api.v1.entity.UserOuterClass.User?
   get() = if (hasUser()) getUser() else null
 

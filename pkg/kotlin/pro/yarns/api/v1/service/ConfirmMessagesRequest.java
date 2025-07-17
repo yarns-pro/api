@@ -6,13 +6,13 @@
 package pro.yarns.api.v1.service;
 
 /**
- * Protobuf type {@code pro.yarns.api.v1.service.ConfirmReceiveRequest}
+ * Protobuf type {@code pro.yarns.api.v1.service.ConfirmMessagesRequest}
  */
 @com.google.protobuf.Generated
-public final class ConfirmReceiveRequest extends
+public final class ConfirmMessagesRequest extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:pro.yarns.api.v1.service.ConfirmReceiveRequest)
-    ConfirmReceiveRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:pro.yarns.api.v1.service.ConfirmMessagesRequest)
+    ConfirmMessagesRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -21,27 +21,27 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 31,
       /* patch= */ 1,
       /* suffix= */ "",
-      ConfirmReceiveRequest.class.getName());
+      ConfirmMessagesRequest.class.getName());
   }
-  // Use ConfirmReceiveRequest.newBuilder() to construct.
-  private ConfirmReceiveRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use ConfirmMessagesRequest.newBuilder() to construct.
+  private ConfirmMessagesRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private ConfirmReceiveRequest() {
+  private ConfirmMessagesRequest() {
     messageIds_ = emptyLongList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmReceiveRequest_descriptor;
+    return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmMessagesRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmReceiveRequest_fieldAccessorTable
+    return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmMessagesRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            pro.yarns.api.v1.service.ConfirmReceiveRequest.class, pro.yarns.api.v1.service.ConfirmReceiveRequest.Builder.class);
+            pro.yarns.api.v1.service.ConfirmMessagesRequest.class, pro.yarns.api.v1.service.ConfirmMessagesRequest.Builder.class);
   }
 
   public static final int MESSAGEIDS_FIELD_NUMBER = 1;
@@ -129,10 +129,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof pro.yarns.api.v1.service.ConfirmReceiveRequest)) {
+    if (!(obj instanceof pro.yarns.api.v1.service.ConfirmMessagesRequest)) {
       return super.equals(obj);
     }
-    pro.yarns.api.v1.service.ConfirmReceiveRequest other = (pro.yarns.api.v1.service.ConfirmReceiveRequest) obj;
+    pro.yarns.api.v1.service.ConfirmMessagesRequest other = (pro.yarns.api.v1.service.ConfirmMessagesRequest) obj;
 
     if (!getMessageIdsList()
         .equals(other.getMessageIdsList())) return false;
@@ -156,44 +156,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static pro.yarns.api.v1.service.ConfirmReceiveRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static pro.yarns.api.v1.service.ConfirmReceiveRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static pro.yarns.api.v1.service.ConfirmReceiveRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static pro.yarns.api.v1.service.ConfirmReceiveRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static pro.yarns.api.v1.service.ConfirmReceiveRequest parseFrom(byte[] data)
+  public static pro.yarns.api.v1.service.ConfirmMessagesRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static pro.yarns.api.v1.service.ConfirmReceiveRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static pro.yarns.api.v1.service.ConfirmReceiveRequest parseFrom(java.io.InputStream input)
+  public static pro.yarns.api.v1.service.ConfirmMessagesRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static pro.yarns.api.v1.service.ConfirmReceiveRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -201,26 +201,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static pro.yarns.api.v1.service.ConfirmReceiveRequest parseDelimitedFrom(java.io.InputStream input)
+  public static pro.yarns.api.v1.service.ConfirmMessagesRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static pro.yarns.api.v1.service.ConfirmReceiveRequest parseDelimitedFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static pro.yarns.api.v1.service.ConfirmReceiveRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static pro.yarns.api.v1.service.ConfirmReceiveRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -233,7 +233,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(pro.yarns.api.v1.service.ConfirmReceiveRequest prototype) {
+  public static Builder newBuilder(pro.yarns.api.v1.service.ConfirmMessagesRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -249,26 +249,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code pro.yarns.api.v1.service.ConfirmReceiveRequest}
+   * Protobuf type {@code pro.yarns.api.v1.service.ConfirmMessagesRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:pro.yarns.api.v1.service.ConfirmReceiveRequest)
-      pro.yarns.api.v1.service.ConfirmReceiveRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:pro.yarns.api.v1.service.ConfirmMessagesRequest)
+      pro.yarns.api.v1.service.ConfirmMessagesRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmReceiveRequest_descriptor;
+      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmMessagesRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmReceiveRequest_fieldAccessorTable
+      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmMessagesRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              pro.yarns.api.v1.service.ConfirmReceiveRequest.class, pro.yarns.api.v1.service.ConfirmReceiveRequest.Builder.class);
+              pro.yarns.api.v1.service.ConfirmMessagesRequest.class, pro.yarns.api.v1.service.ConfirmMessagesRequest.Builder.class);
     }
 
-    // Construct using pro.yarns.api.v1.service.ConfirmReceiveRequest.newBuilder()
+    // Construct using pro.yarns.api.v1.service.ConfirmMessagesRequest.newBuilder()
     private Builder() {
 
     }
@@ -289,17 +289,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmReceiveRequest_descriptor;
+      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmMessagesRequest_descriptor;
     }
 
     @java.lang.Override
-    public pro.yarns.api.v1.service.ConfirmReceiveRequest getDefaultInstanceForType() {
-      return pro.yarns.api.v1.service.ConfirmReceiveRequest.getDefaultInstance();
+    public pro.yarns.api.v1.service.ConfirmMessagesRequest getDefaultInstanceForType() {
+      return pro.yarns.api.v1.service.ConfirmMessagesRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public pro.yarns.api.v1.service.ConfirmReceiveRequest build() {
-      pro.yarns.api.v1.service.ConfirmReceiveRequest result = buildPartial();
+    public pro.yarns.api.v1.service.ConfirmMessagesRequest build() {
+      pro.yarns.api.v1.service.ConfirmMessagesRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -307,14 +307,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public pro.yarns.api.v1.service.ConfirmReceiveRequest buildPartial() {
-      pro.yarns.api.v1.service.ConfirmReceiveRequest result = new pro.yarns.api.v1.service.ConfirmReceiveRequest(this);
+    public pro.yarns.api.v1.service.ConfirmMessagesRequest buildPartial() {
+      pro.yarns.api.v1.service.ConfirmMessagesRequest result = new pro.yarns.api.v1.service.ConfirmMessagesRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(pro.yarns.api.v1.service.ConfirmReceiveRequest result) {
+    private void buildPartial0(pro.yarns.api.v1.service.ConfirmMessagesRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         messageIds_.makeImmutable();
@@ -324,16 +324,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof pro.yarns.api.v1.service.ConfirmReceiveRequest) {
-        return mergeFrom((pro.yarns.api.v1.service.ConfirmReceiveRequest)other);
+      if (other instanceof pro.yarns.api.v1.service.ConfirmMessagesRequest) {
+        return mergeFrom((pro.yarns.api.v1.service.ConfirmMessagesRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(pro.yarns.api.v1.service.ConfirmReceiveRequest other) {
-      if (other == pro.yarns.api.v1.service.ConfirmReceiveRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(pro.yarns.api.v1.service.ConfirmMessagesRequest other) {
+      if (other == pro.yarns.api.v1.service.ConfirmMessagesRequest.getDefaultInstance()) return this;
       if (!other.messageIds_.isEmpty()) {
         if (messageIds_.isEmpty()) {
           messageIds_ = other.messageIds_;
@@ -488,23 +488,23 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    // @@protoc_insertion_point(builder_scope:pro.yarns.api.v1.service.ConfirmReceiveRequest)
+    // @@protoc_insertion_point(builder_scope:pro.yarns.api.v1.service.ConfirmMessagesRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:pro.yarns.api.v1.service.ConfirmReceiveRequest)
-  private static final pro.yarns.api.v1.service.ConfirmReceiveRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:pro.yarns.api.v1.service.ConfirmMessagesRequest)
+  private static final pro.yarns.api.v1.service.ConfirmMessagesRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new pro.yarns.api.v1.service.ConfirmReceiveRequest();
+    DEFAULT_INSTANCE = new pro.yarns.api.v1.service.ConfirmMessagesRequest();
   }
 
-  public static pro.yarns.api.v1.service.ConfirmReceiveRequest getDefaultInstance() {
+  public static pro.yarns.api.v1.service.ConfirmMessagesRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ConfirmReceiveRequest>
-      PARSER = new com.google.protobuf.AbstractParser<ConfirmReceiveRequest>() {
+  private static final com.google.protobuf.Parser<ConfirmMessagesRequest>
+      PARSER = new com.google.protobuf.AbstractParser<ConfirmMessagesRequest>() {
     @java.lang.Override
-    public ConfirmReceiveRequest parsePartialFrom(
+    public ConfirmMessagesRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -523,17 +523,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ConfirmReceiveRequest> parser() {
+  public static com.google.protobuf.Parser<ConfirmMessagesRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ConfirmReceiveRequest> getParserForType() {
+  public com.google.protobuf.Parser<ConfirmMessagesRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public pro.yarns.api.v1.service.ConfirmReceiveRequest getDefaultInstanceForType() {
+  public pro.yarns.api.v1.service.ConfirmMessagesRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

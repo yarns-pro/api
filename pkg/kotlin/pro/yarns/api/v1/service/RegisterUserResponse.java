@@ -6,13 +6,13 @@
 package pro.yarns.api.v1.service;
 
 /**
- * Protobuf type {@code pro.yarns.api.v1.service.GetMessageByIdResponse}
+ * Protobuf type {@code pro.yarns.api.v1.service.RegisterUserResponse}
  */
 @com.google.protobuf.Generated
-public final class GetMessageByIdResponse extends
+public final class RegisterUserResponse extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:pro.yarns.api.v1.service.GetMessageByIdResponse)
-    GetMessageByIdResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:pro.yarns.api.v1.service.RegisterUserResponse)
+    RegisterUserResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -21,53 +21,53 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 31,
       /* patch= */ 1,
       /* suffix= */ "",
-      GetMessageByIdResponse.class.getName());
+      RegisterUserResponse.class.getName());
   }
-  // Use GetMessageByIdResponse.newBuilder() to construct.
-  private GetMessageByIdResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use RegisterUserResponse.newBuilder() to construct.
+  private RegisterUserResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private GetMessageByIdResponse() {
+  private RegisterUserResponse() {
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_GetMessageByIdResponse_descriptor;
+    return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_RegisterUserResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_GetMessageByIdResponse_fieldAccessorTable
+    return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_RegisterUserResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            pro.yarns.api.v1.service.GetMessageByIdResponse.class, pro.yarns.api.v1.service.GetMessageByIdResponse.Builder.class);
+            pro.yarns.api.v1.service.RegisterUserResponse.class, pro.yarns.api.v1.service.RegisterUserResponse.Builder.class);
   }
 
   private int bitField0_;
-  public static final int MESSAGE_FIELD_NUMBER = 1;
-  private pro.yarns.api.v1.entity.MessageOuterClass.Message message_;
+  public static final int USER_FIELD_NUMBER = 1;
+  private pro.yarns.api.v1.entity.UserOuterClass.User user_;
   /**
-   * <code>.pro.yarns.api.v1.entity.Message message = 1 [json_name = "message"];</code>
-   * @return Whether the message field is set.
+   * <code>.pro.yarns.api.v1.entity.User user = 1 [json_name = "user"];</code>
+   * @return Whether the user field is set.
    */
   @java.lang.Override
-  public boolean hasMessage() {
+  public boolean hasUser() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.pro.yarns.api.v1.entity.Message message = 1 [json_name = "message"];</code>
-   * @return The message.
+   * <code>.pro.yarns.api.v1.entity.User user = 1 [json_name = "user"];</code>
+   * @return The user.
    */
   @java.lang.Override
-  public pro.yarns.api.v1.entity.MessageOuterClass.Message getMessage() {
-    return message_ == null ? pro.yarns.api.v1.entity.MessageOuterClass.Message.getDefaultInstance() : message_;
+  public pro.yarns.api.v1.entity.UserOuterClass.User getUser() {
+    return user_ == null ? pro.yarns.api.v1.entity.UserOuterClass.User.getDefaultInstance() : user_;
   }
   /**
-   * <code>.pro.yarns.api.v1.entity.Message message = 1 [json_name = "message"];</code>
+   * <code>.pro.yarns.api.v1.entity.User user = 1 [json_name = "user"];</code>
    */
   @java.lang.Override
-  public pro.yarns.api.v1.entity.MessageOuterClass.MessageOrBuilder getMessageOrBuilder() {
-    return message_ == null ? pro.yarns.api.v1.entity.MessageOuterClass.Message.getDefaultInstance() : message_;
+  public pro.yarns.api.v1.entity.UserOuterClass.UserOrBuilder getUserOrBuilder() {
+    return user_ == null ? pro.yarns.api.v1.entity.UserOuterClass.User.getDefaultInstance() : user_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -85,7 +85,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(1, getMessage());
+      output.writeMessage(1, getUser());
     }
     getUnknownFields().writeTo(output);
   }
@@ -98,7 +98,7 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getMessage());
+        .computeMessageSize(1, getUser());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -110,15 +110,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof pro.yarns.api.v1.service.GetMessageByIdResponse)) {
+    if (!(obj instanceof pro.yarns.api.v1.service.RegisterUserResponse)) {
       return super.equals(obj);
     }
-    pro.yarns.api.v1.service.GetMessageByIdResponse other = (pro.yarns.api.v1.service.GetMessageByIdResponse) obj;
+    pro.yarns.api.v1.service.RegisterUserResponse other = (pro.yarns.api.v1.service.RegisterUserResponse) obj;
 
-    if (hasMessage() != other.hasMessage()) return false;
-    if (hasMessage()) {
-      if (!getMessage()
-          .equals(other.getMessage())) return false;
+    if (hasUser() != other.hasUser()) return false;
+    if (hasUser()) {
+      if (!getUser()
+          .equals(other.getUser())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -131,53 +131,53 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasMessage()) {
-      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getMessage().hashCode();
+    if (hasUser()) {
+      hash = (37 * hash) + USER_FIELD_NUMBER;
+      hash = (53 * hash) + getUser().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static pro.yarns.api.v1.service.GetMessageByIdResponse parseFrom(
+  public static pro.yarns.api.v1.service.RegisterUserResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static pro.yarns.api.v1.service.GetMessageByIdResponse parseFrom(
+  public static pro.yarns.api.v1.service.RegisterUserResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static pro.yarns.api.v1.service.GetMessageByIdResponse parseFrom(
+  public static pro.yarns.api.v1.service.RegisterUserResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static pro.yarns.api.v1.service.GetMessageByIdResponse parseFrom(
+  public static pro.yarns.api.v1.service.RegisterUserResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static pro.yarns.api.v1.service.GetMessageByIdResponse parseFrom(byte[] data)
+  public static pro.yarns.api.v1.service.RegisterUserResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static pro.yarns.api.v1.service.GetMessageByIdResponse parseFrom(
+  public static pro.yarns.api.v1.service.RegisterUserResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static pro.yarns.api.v1.service.GetMessageByIdResponse parseFrom(java.io.InputStream input)
+  public static pro.yarns.api.v1.service.RegisterUserResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static pro.yarns.api.v1.service.GetMessageByIdResponse parseFrom(
+  public static pro.yarns.api.v1.service.RegisterUserResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static pro.yarns.api.v1.service.GetMessageByIdResponse parseDelimitedFrom(java.io.InputStream input)
+  public static pro.yarns.api.v1.service.RegisterUserResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static pro.yarns.api.v1.service.GetMessageByIdResponse parseDelimitedFrom(
+  public static pro.yarns.api.v1.service.RegisterUserResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static pro.yarns.api.v1.service.GetMessageByIdResponse parseFrom(
+  public static pro.yarns.api.v1.service.RegisterUserResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static pro.yarns.api.v1.service.GetMessageByIdResponse parseFrom(
+  public static pro.yarns.api.v1.service.RegisterUserResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -217,7 +217,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(pro.yarns.api.v1.service.GetMessageByIdResponse prototype) {
+  public static Builder newBuilder(pro.yarns.api.v1.service.RegisterUserResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -233,26 +233,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code pro.yarns.api.v1.service.GetMessageByIdResponse}
+   * Protobuf type {@code pro.yarns.api.v1.service.RegisterUserResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:pro.yarns.api.v1.service.GetMessageByIdResponse)
-      pro.yarns.api.v1.service.GetMessageByIdResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:pro.yarns.api.v1.service.RegisterUserResponse)
+      pro.yarns.api.v1.service.RegisterUserResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_GetMessageByIdResponse_descriptor;
+      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_RegisterUserResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_GetMessageByIdResponse_fieldAccessorTable
+      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_RegisterUserResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              pro.yarns.api.v1.service.GetMessageByIdResponse.class, pro.yarns.api.v1.service.GetMessageByIdResponse.Builder.class);
+              pro.yarns.api.v1.service.RegisterUserResponse.class, pro.yarns.api.v1.service.RegisterUserResponse.Builder.class);
     }
 
-    // Construct using pro.yarns.api.v1.service.GetMessageByIdResponse.newBuilder()
+    // Construct using pro.yarns.api.v1.service.RegisterUserResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -265,17 +265,17 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
-        internalGetMessageFieldBuilder();
+        internalGetUserFieldBuilder();
       }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      message_ = null;
-      if (messageBuilder_ != null) {
-        messageBuilder_.dispose();
-        messageBuilder_ = null;
+      user_ = null;
+      if (userBuilder_ != null) {
+        userBuilder_.dispose();
+        userBuilder_ = null;
       }
       return this;
     }
@@ -283,17 +283,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_GetMessageByIdResponse_descriptor;
+      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_RegisterUserResponse_descriptor;
     }
 
     @java.lang.Override
-    public pro.yarns.api.v1.service.GetMessageByIdResponse getDefaultInstanceForType() {
-      return pro.yarns.api.v1.service.GetMessageByIdResponse.getDefaultInstance();
+    public pro.yarns.api.v1.service.RegisterUserResponse getDefaultInstanceForType() {
+      return pro.yarns.api.v1.service.RegisterUserResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public pro.yarns.api.v1.service.GetMessageByIdResponse build() {
-      pro.yarns.api.v1.service.GetMessageByIdResponse result = buildPartial();
+    public pro.yarns.api.v1.service.RegisterUserResponse build() {
+      pro.yarns.api.v1.service.RegisterUserResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -301,20 +301,20 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public pro.yarns.api.v1.service.GetMessageByIdResponse buildPartial() {
-      pro.yarns.api.v1.service.GetMessageByIdResponse result = new pro.yarns.api.v1.service.GetMessageByIdResponse(this);
+    public pro.yarns.api.v1.service.RegisterUserResponse buildPartial() {
+      pro.yarns.api.v1.service.RegisterUserResponse result = new pro.yarns.api.v1.service.RegisterUserResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(pro.yarns.api.v1.service.GetMessageByIdResponse result) {
+    private void buildPartial0(pro.yarns.api.v1.service.RegisterUserResponse result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.message_ = messageBuilder_ == null
-            ? message_
-            : messageBuilder_.build();
+        result.user_ = userBuilder_ == null
+            ? user_
+            : userBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       result.bitField0_ |= to_bitField0_;
@@ -322,18 +322,18 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof pro.yarns.api.v1.service.GetMessageByIdResponse) {
-        return mergeFrom((pro.yarns.api.v1.service.GetMessageByIdResponse)other);
+      if (other instanceof pro.yarns.api.v1.service.RegisterUserResponse) {
+        return mergeFrom((pro.yarns.api.v1.service.RegisterUserResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(pro.yarns.api.v1.service.GetMessageByIdResponse other) {
-      if (other == pro.yarns.api.v1.service.GetMessageByIdResponse.getDefaultInstance()) return this;
-      if (other.hasMessage()) {
-        mergeMessage(other.getMessage());
+    public Builder mergeFrom(pro.yarns.api.v1.service.RegisterUserResponse other) {
+      if (other == pro.yarns.api.v1.service.RegisterUserResponse.getDefaultInstance()) return this;
+      if (other.hasUser()) {
+        mergeUser(other.getUser());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -363,7 +363,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               input.readMessage(
-                  internalGetMessageFieldBuilder().getBuilder(),
+                  internalGetUserFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
@@ -385,144 +385,144 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private pro.yarns.api.v1.entity.MessageOuterClass.Message message_;
+    private pro.yarns.api.v1.entity.UserOuterClass.User user_;
     private com.google.protobuf.SingleFieldBuilder<
-        pro.yarns.api.v1.entity.MessageOuterClass.Message, pro.yarns.api.v1.entity.MessageOuterClass.Message.Builder, pro.yarns.api.v1.entity.MessageOuterClass.MessageOrBuilder> messageBuilder_;
+        pro.yarns.api.v1.entity.UserOuterClass.User, pro.yarns.api.v1.entity.UserOuterClass.User.Builder, pro.yarns.api.v1.entity.UserOuterClass.UserOrBuilder> userBuilder_;
     /**
-     * <code>.pro.yarns.api.v1.entity.Message message = 1 [json_name = "message"];</code>
-     * @return Whether the message field is set.
+     * <code>.pro.yarns.api.v1.entity.User user = 1 [json_name = "user"];</code>
+     * @return Whether the user field is set.
      */
-    public boolean hasMessage() {
+    public boolean hasUser() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.pro.yarns.api.v1.entity.Message message = 1 [json_name = "message"];</code>
-     * @return The message.
+     * <code>.pro.yarns.api.v1.entity.User user = 1 [json_name = "user"];</code>
+     * @return The user.
      */
-    public pro.yarns.api.v1.entity.MessageOuterClass.Message getMessage() {
-      if (messageBuilder_ == null) {
-        return message_ == null ? pro.yarns.api.v1.entity.MessageOuterClass.Message.getDefaultInstance() : message_;
+    public pro.yarns.api.v1.entity.UserOuterClass.User getUser() {
+      if (userBuilder_ == null) {
+        return user_ == null ? pro.yarns.api.v1.entity.UserOuterClass.User.getDefaultInstance() : user_;
       } else {
-        return messageBuilder_.getMessage();
+        return userBuilder_.getMessage();
       }
     }
     /**
-     * <code>.pro.yarns.api.v1.entity.Message message = 1 [json_name = "message"];</code>
+     * <code>.pro.yarns.api.v1.entity.User user = 1 [json_name = "user"];</code>
      */
-    public Builder setMessage(pro.yarns.api.v1.entity.MessageOuterClass.Message value) {
-      if (messageBuilder_ == null) {
+    public Builder setUser(pro.yarns.api.v1.entity.UserOuterClass.User value) {
+      if (userBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        message_ = value;
+        user_ = value;
       } else {
-        messageBuilder_.setMessage(value);
+        userBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.pro.yarns.api.v1.entity.Message message = 1 [json_name = "message"];</code>
+     * <code>.pro.yarns.api.v1.entity.User user = 1 [json_name = "user"];</code>
      */
-    public Builder setMessage(
-        pro.yarns.api.v1.entity.MessageOuterClass.Message.Builder builderForValue) {
-      if (messageBuilder_ == null) {
-        message_ = builderForValue.build();
+    public Builder setUser(
+        pro.yarns.api.v1.entity.UserOuterClass.User.Builder builderForValue) {
+      if (userBuilder_ == null) {
+        user_ = builderForValue.build();
       } else {
-        messageBuilder_.setMessage(builderForValue.build());
+        userBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.pro.yarns.api.v1.entity.Message message = 1 [json_name = "message"];</code>
+     * <code>.pro.yarns.api.v1.entity.User user = 1 [json_name = "user"];</code>
      */
-    public Builder mergeMessage(pro.yarns.api.v1.entity.MessageOuterClass.Message value) {
-      if (messageBuilder_ == null) {
+    public Builder mergeUser(pro.yarns.api.v1.entity.UserOuterClass.User value) {
+      if (userBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
-          message_ != null &&
-          message_ != pro.yarns.api.v1.entity.MessageOuterClass.Message.getDefaultInstance()) {
-          getMessageBuilder().mergeFrom(value);
+          user_ != null &&
+          user_ != pro.yarns.api.v1.entity.UserOuterClass.User.getDefaultInstance()) {
+          getUserBuilder().mergeFrom(value);
         } else {
-          message_ = value;
+          user_ = value;
         }
       } else {
-        messageBuilder_.mergeFrom(value);
+        userBuilder_.mergeFrom(value);
       }
-      if (message_ != null) {
+      if (user_ != null) {
         bitField0_ |= 0x00000001;
         onChanged();
       }
       return this;
     }
     /**
-     * <code>.pro.yarns.api.v1.entity.Message message = 1 [json_name = "message"];</code>
+     * <code>.pro.yarns.api.v1.entity.User user = 1 [json_name = "user"];</code>
      */
-    public Builder clearMessage() {
+    public Builder clearUser() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      message_ = null;
-      if (messageBuilder_ != null) {
-        messageBuilder_.dispose();
-        messageBuilder_ = null;
+      user_ = null;
+      if (userBuilder_ != null) {
+        userBuilder_.dispose();
+        userBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.pro.yarns.api.v1.entity.Message message = 1 [json_name = "message"];</code>
+     * <code>.pro.yarns.api.v1.entity.User user = 1 [json_name = "user"];</code>
      */
-    public pro.yarns.api.v1.entity.MessageOuterClass.Message.Builder getMessageBuilder() {
+    public pro.yarns.api.v1.entity.UserOuterClass.User.Builder getUserBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
-      return internalGetMessageFieldBuilder().getBuilder();
+      return internalGetUserFieldBuilder().getBuilder();
     }
     /**
-     * <code>.pro.yarns.api.v1.entity.Message message = 1 [json_name = "message"];</code>
+     * <code>.pro.yarns.api.v1.entity.User user = 1 [json_name = "user"];</code>
      */
-    public pro.yarns.api.v1.entity.MessageOuterClass.MessageOrBuilder getMessageOrBuilder() {
-      if (messageBuilder_ != null) {
-        return messageBuilder_.getMessageOrBuilder();
+    public pro.yarns.api.v1.entity.UserOuterClass.UserOrBuilder getUserOrBuilder() {
+      if (userBuilder_ != null) {
+        return userBuilder_.getMessageOrBuilder();
       } else {
-        return message_ == null ?
-            pro.yarns.api.v1.entity.MessageOuterClass.Message.getDefaultInstance() : message_;
+        return user_ == null ?
+            pro.yarns.api.v1.entity.UserOuterClass.User.getDefaultInstance() : user_;
       }
     }
     /**
-     * <code>.pro.yarns.api.v1.entity.Message message = 1 [json_name = "message"];</code>
+     * <code>.pro.yarns.api.v1.entity.User user = 1 [json_name = "user"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        pro.yarns.api.v1.entity.MessageOuterClass.Message, pro.yarns.api.v1.entity.MessageOuterClass.Message.Builder, pro.yarns.api.v1.entity.MessageOuterClass.MessageOrBuilder> 
-        internalGetMessageFieldBuilder() {
-      if (messageBuilder_ == null) {
-        messageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            pro.yarns.api.v1.entity.MessageOuterClass.Message, pro.yarns.api.v1.entity.MessageOuterClass.Message.Builder, pro.yarns.api.v1.entity.MessageOuterClass.MessageOrBuilder>(
-                getMessage(),
+        pro.yarns.api.v1.entity.UserOuterClass.User, pro.yarns.api.v1.entity.UserOuterClass.User.Builder, pro.yarns.api.v1.entity.UserOuterClass.UserOrBuilder> 
+        internalGetUserFieldBuilder() {
+      if (userBuilder_ == null) {
+        userBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            pro.yarns.api.v1.entity.UserOuterClass.User, pro.yarns.api.v1.entity.UserOuterClass.User.Builder, pro.yarns.api.v1.entity.UserOuterClass.UserOrBuilder>(
+                getUser(),
                 getParentForChildren(),
                 isClean());
-        message_ = null;
+        user_ = null;
       }
-      return messageBuilder_;
+      return userBuilder_;
     }
 
-    // @@protoc_insertion_point(builder_scope:pro.yarns.api.v1.service.GetMessageByIdResponse)
+    // @@protoc_insertion_point(builder_scope:pro.yarns.api.v1.service.RegisterUserResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:pro.yarns.api.v1.service.GetMessageByIdResponse)
-  private static final pro.yarns.api.v1.service.GetMessageByIdResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:pro.yarns.api.v1.service.RegisterUserResponse)
+  private static final pro.yarns.api.v1.service.RegisterUserResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new pro.yarns.api.v1.service.GetMessageByIdResponse();
+    DEFAULT_INSTANCE = new pro.yarns.api.v1.service.RegisterUserResponse();
   }
 
-  public static pro.yarns.api.v1.service.GetMessageByIdResponse getDefaultInstance() {
+  public static pro.yarns.api.v1.service.RegisterUserResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetMessageByIdResponse>
-      PARSER = new com.google.protobuf.AbstractParser<GetMessageByIdResponse>() {
+  private static final com.google.protobuf.Parser<RegisterUserResponse>
+      PARSER = new com.google.protobuf.AbstractParser<RegisterUserResponse>() {
     @java.lang.Override
-    public GetMessageByIdResponse parsePartialFrom(
+    public RegisterUserResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -541,17 +541,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetMessageByIdResponse> parser() {
+  public static com.google.protobuf.Parser<RegisterUserResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetMessageByIdResponse> getParserForType() {
+  public com.google.protobuf.Parser<RegisterUserResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public pro.yarns.api.v1.service.GetMessageByIdResponse getDefaultInstanceForType() {
+  public pro.yarns.api.v1.service.RegisterUserResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

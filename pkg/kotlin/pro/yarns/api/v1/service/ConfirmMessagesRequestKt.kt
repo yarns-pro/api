@@ -6,27 +6,27 @@
 @file:Suppress("DEPRECATION")
 package pro.yarns.api.v1.service;
 
-@kotlin.jvm.JvmName("-initializeconfirmReceiveRequest")
-public inline fun confirmReceiveRequest(block: pro.yarns.api.v1.service.ConfirmReceiveRequestKt.Dsl.() -> kotlin.Unit): pro.yarns.api.v1.service.ConfirmReceiveRequest =
-  pro.yarns.api.v1.service.ConfirmReceiveRequestKt.Dsl._create(pro.yarns.api.v1.service.ConfirmReceiveRequest.newBuilder()).apply { block() }._build()
+@kotlin.jvm.JvmName("-initializeconfirmMessagesRequest")
+public inline fun confirmMessagesRequest(block: pro.yarns.api.v1.service.ConfirmMessagesRequestKt.Dsl.() -> kotlin.Unit): pro.yarns.api.v1.service.ConfirmMessagesRequest =
+  pro.yarns.api.v1.service.ConfirmMessagesRequestKt.Dsl._create(pro.yarns.api.v1.service.ConfirmMessagesRequest.newBuilder()).apply { block() }._build()
 /**
- * Protobuf type `pro.yarns.api.v1.service.ConfirmReceiveRequest`
+ * Protobuf type `pro.yarns.api.v1.service.ConfirmMessagesRequest`
  */
-public object ConfirmReceiveRequestKt {
+public object ConfirmMessagesRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
   public class Dsl private constructor(
-    private val _builder: pro.yarns.api.v1.service.ConfirmReceiveRequest.Builder
+    private val _builder: pro.yarns.api.v1.service.ConfirmMessagesRequest.Builder
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
     @kotlin.PublishedApi
-      internal fun _create(builder: pro.yarns.api.v1.service.ConfirmReceiveRequest.Builder): Dsl = Dsl(builder)
+      internal fun _create(builder: pro.yarns.api.v1.service.ConfirmMessagesRequest.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
   @kotlin.PublishedApi
-    internal fun _build(): pro.yarns.api.v1.service.ConfirmReceiveRequest = _builder.build()
+    internal fun _build(): pro.yarns.api.v1.service.ConfirmMessagesRequest = _builder.build()
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -95,6 +95,6 @@ public object ConfirmReceiveRequestKt {
     }}
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun pro.yarns.api.v1.service.ConfirmReceiveRequest.copy(block: `pro.yarns.api.v1.service`.ConfirmReceiveRequestKt.Dsl.() -> kotlin.Unit): pro.yarns.api.v1.service.ConfirmReceiveRequest =
-  `pro.yarns.api.v1.service`.ConfirmReceiveRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+public inline fun pro.yarns.api.v1.service.ConfirmMessagesRequest.copy(block: `pro.yarns.api.v1.service`.ConfirmMessagesRequestKt.Dsl.() -> kotlin.Unit): pro.yarns.api.v1.service.ConfirmMessagesRequest =
+  `pro.yarns.api.v1.service`.ConfirmMessagesRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 

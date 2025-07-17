@@ -27,6 +27,8 @@ type MessageMetadata struct {
 	MimeType      string                 `protobuf:"bytes,1,opt,name=mimeType,proto3" json:"mimeType,omitempty"`
 	Filename      string                 `protobuf:"bytes,2,opt,name=filename,proto3" json:"filename,omitempty"`
 	Filesize      int64                  `protobuf:"varint,3,opt,name=filesize,proto3" json:"filesize,omitempty"`
+	StorageId     int32                  `protobuf:"varint,4,opt,name=storageId,proto3" json:"storageId,omitempty"`
+	StorageUrl    string                 `protobuf:"bytes,5,opt,name=storageUrl,proto3" json:"storageUrl,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -82,15 +84,33 @@ func (x *MessageMetadata) GetFilesize() int64 {
 	return 0
 }
 
+func (x *MessageMetadata) GetStorageId() int32 {
+	if x != nil {
+		return x.StorageId
+	}
+	return 0
+}
+
+func (x *MessageMetadata) GetStorageUrl() string {
+	if x != nil {
+		return x.StorageUrl
+	}
+	return ""
+}
+
 var File_v1_entity_message_metadata_proto protoreflect.FileDescriptor
 
 const file_v1_entity_message_metadata_proto_rawDesc = "" +
 	"\n" +
-	" v1/entity/message_metadata.proto\x12\x17pro.yarns.api.v1.entity\x1a\x1fgoogle/protobuf/timestamp.proto\"e\n" +
+	" v1/entity/message_metadata.proto\x12\x17pro.yarns.api.v1.entity\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa3\x01\n" +
 	"\x0fMessageMetadata\x12\x1a\n" +
 	"\bmimeType\x18\x01 \x01(\tR\bmimeType\x12\x1a\n" +
 	"\bfilename\x18\x02 \x01(\tR\bfilename\x12\x1a\n" +
-	"\bfilesize\x18\x03 \x01(\x03R\bfilesizeB+Z)github.com/yarns-pro/api/pkg/go/v1/entityb\x06proto3"
+	"\bfilesize\x18\x03 \x01(\x03R\bfilesize\x12\x1c\n" +
+	"\tstorageId\x18\x04 \x01(\x05R\tstorageId\x12\x1e\n" +
+	"\n" +
+	"storageUrl\x18\x05 \x01(\tR\n" +
+	"storageUrlB+Z)github.com/yarns-pro/api/pkg/go/v1/entityb\x06proto3"
 
 var (
 	file_v1_entity_message_metadata_proto_rawDescOnce sync.Once

@@ -6,27 +6,27 @@
 @file:Suppress("DEPRECATION")
 package pro.yarns.api.v1.service;
 
-@kotlin.jvm.JvmName("-initializeregisterRequest")
-public inline fun registerRequest(block: pro.yarns.api.v1.service.RegisterRequestKt.Dsl.() -> kotlin.Unit): pro.yarns.api.v1.service.RegisterRequest =
-  pro.yarns.api.v1.service.RegisterRequestKt.Dsl._create(pro.yarns.api.v1.service.RegisterRequest.newBuilder()).apply { block() }._build()
+@kotlin.jvm.JvmName("-initializeregisterUserRequest")
+public inline fun registerUserRequest(block: pro.yarns.api.v1.service.RegisterUserRequestKt.Dsl.() -> kotlin.Unit): pro.yarns.api.v1.service.RegisterUserRequest =
+  pro.yarns.api.v1.service.RegisterUserRequestKt.Dsl._create(pro.yarns.api.v1.service.RegisterUserRequest.newBuilder()).apply { block() }._build()
 /**
- * Protobuf type `pro.yarns.api.v1.service.RegisterRequest`
+ * Protobuf type `pro.yarns.api.v1.service.RegisterUserRequest`
  */
-public object RegisterRequestKt {
+public object RegisterUserRequestKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
   public class Dsl private constructor(
-    private val _builder: pro.yarns.api.v1.service.RegisterRequest.Builder
+    private val _builder: pro.yarns.api.v1.service.RegisterUserRequest.Builder
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
     @kotlin.PublishedApi
-      internal fun _create(builder: pro.yarns.api.v1.service.RegisterRequest.Builder): Dsl = Dsl(builder)
+      internal fun _create(builder: pro.yarns.api.v1.service.RegisterUserRequest.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
   @kotlin.PublishedApi
-    internal fun _build(): pro.yarns.api.v1.service.RegisterRequest = _builder.build()
+    internal fun _build(): pro.yarns.api.v1.service.RegisterUserRequest = _builder.build()
 
     /**
      * `bytes publicKey = 1 [json_name = "publicKey"];`
@@ -47,6 +47,6 @@ public object RegisterRequestKt {
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun pro.yarns.api.v1.service.RegisterRequest.copy(block: `pro.yarns.api.v1.service`.RegisterRequestKt.Dsl.() -> kotlin.Unit): pro.yarns.api.v1.service.RegisterRequest =
-  `pro.yarns.api.v1.service`.RegisterRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+public inline fun pro.yarns.api.v1.service.RegisterUserRequest.copy(block: `pro.yarns.api.v1.service`.RegisterUserRequestKt.Dsl.() -> kotlin.Unit): pro.yarns.api.v1.service.RegisterUserRequest =
+  `pro.yarns.api.v1.service`.RegisterUserRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 

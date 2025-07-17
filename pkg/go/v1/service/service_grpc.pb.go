@@ -19,24 +19,22 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	YarnsApiV1_Register_FullMethodName       = "/pro.yarns.api.v1.service.YarnsApiV1/Register"
-	YarnsApiV1_GetUserById_FullMethodName    = "/pro.yarns.api.v1.service.YarnsApiV1/GetUserById"
-	YarnsApiV1_SendMessage_FullMethodName    = "/pro.yarns.api.v1.service.YarnsApiV1/SendMessage"
-	YarnsApiV1_CheckMessages_FullMethodName  = "/pro.yarns.api.v1.service.YarnsApiV1/CheckMessages"
-	YarnsApiV1_GetMessageById_FullMethodName = "/pro.yarns.api.v1.service.YarnsApiV1/GetMessageById"
-	YarnsApiV1_ConfirmReceive_FullMethodName = "/pro.yarns.api.v1.service.YarnsApiV1/ConfirmReceive"
+	YarnsApiV1_RegisterUser_FullMethodName    = "/pro.yarns.api.v1.service.YarnsApiV1/RegisterUser"
+	YarnsApiV1_GetUserById_FullMethodName     = "/pro.yarns.api.v1.service.YarnsApiV1/GetUserById"
+	YarnsApiV1_SendMessage_FullMethodName     = "/pro.yarns.api.v1.service.YarnsApiV1/SendMessage"
+	YarnsApiV1_CheckMessages_FullMethodName   = "/pro.yarns.api.v1.service.YarnsApiV1/CheckMessages"
+	YarnsApiV1_ConfirmMessages_FullMethodName = "/pro.yarns.api.v1.service.YarnsApiV1/ConfirmMessages"
 )
 
 // YarnsApiV1Client is the client API for YarnsApiV1 service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type YarnsApiV1Client interface {
-	Register(ctx context.Context, in *RegisterRequest, opts ...grpc.CallOption) (*RegisterResponse, error)
+	RegisterUser(ctx context.Context, in *RegisterUserRequest, opts ...grpc.CallOption) (*RegisterUserResponse, error)
 	GetUserById(ctx context.Context, in *GetUserByIdRequest, opts ...grpc.CallOption) (*GetUserByIdResponse, error)
 	SendMessage(ctx context.Context, in *SendMessageRequest, opts ...grpc.CallOption) (*SendMessageResponse, error)
 	CheckMessages(ctx context.Context, in *CheckMessagesRequest, opts ...grpc.CallOption) (*CheckMessagesResponse, error)
-	GetMessageById(ctx context.Context, in *GetMessageByIdRequest, opts ...grpc.CallOption) (*GetMessageByIdResponse, error)
-	ConfirmReceive(ctx context.Context, in *ConfirmReceiveRequest, opts ...grpc.CallOption) (*ConfirmReceiveResponse, error)
+	ConfirmMessages(ctx context.Context, in *ConfirmMessagesRequest, opts ...grpc.CallOption) (*ConfirmMessagesResponse, error)
 }
 
 type yarnsApiV1Client struct {
@@ -47,10 +45,10 @@ func NewYarnsApiV1Client(cc grpc.ClientConnInterface) YarnsApiV1Client {
 	return &yarnsApiV1Client{cc}
 }
 
-func (c *yarnsApiV1Client) Register(ctx context.Context, in *RegisterRequest, opts ...grpc.CallOption) (*RegisterResponse, error) {
+func (c *yarnsApiV1Client) RegisterUser(ctx context.Context, in *RegisterUserRequest, opts ...grpc.CallOption) (*RegisterUserResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(RegisterResponse)
-	err := c.cc.Invoke(ctx, YarnsApiV1_Register_FullMethodName, in, out, cOpts...)
+	out := new(RegisterUserResponse)
+	err := c.cc.Invoke(ctx, YarnsApiV1_RegisterUser_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -87,20 +85,10 @@ func (c *yarnsApiV1Client) CheckMessages(ctx context.Context, in *CheckMessagesR
 	return out, nil
 }
 
-func (c *yarnsApiV1Client) GetMessageById(ctx context.Context, in *GetMessageByIdRequest, opts ...grpc.CallOption) (*GetMessageByIdResponse, error) {
+func (c *yarnsApiV1Client) ConfirmMessages(ctx context.Context, in *ConfirmMessagesRequest, opts ...grpc.CallOption) (*ConfirmMessagesResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(GetMessageByIdResponse)
-	err := c.cc.Invoke(ctx, YarnsApiV1_GetMessageById_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *yarnsApiV1Client) ConfirmReceive(ctx context.Context, in *ConfirmReceiveRequest, opts ...grpc.CallOption) (*ConfirmReceiveResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(ConfirmReceiveResponse)
-	err := c.cc.Invoke(ctx, YarnsApiV1_ConfirmReceive_FullMethodName, in, out, cOpts...)
+	out := new(ConfirmMessagesResponse)
+	err := c.cc.Invoke(ctx, YarnsApiV1_ConfirmMessages_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -111,12 +99,11 @@ func (c *yarnsApiV1Client) ConfirmReceive(ctx context.Context, in *ConfirmReceiv
 // All implementations must embed UnimplementedYarnsApiV1Server
 // for forward compatibility.
 type YarnsApiV1Server interface {
-	Register(context.Context, *RegisterRequest) (*RegisterResponse, error)
+	RegisterUser(context.Context, *RegisterUserRequest) (*RegisterUserResponse, error)
 	GetUserById(context.Context, *GetUserByIdRequest) (*GetUserByIdResponse, error)
 	SendMessage(context.Context, *SendMessageRequest) (*SendMessageResponse, error)
 	CheckMessages(context.Context, *CheckMessagesRequest) (*CheckMessagesResponse, error)
-	GetMessageById(context.Context, *GetMessageByIdRequest) (*GetMessageByIdResponse, error)
-	ConfirmReceive(context.Context, *ConfirmReceiveRequest) (*ConfirmReceiveResponse, error)
+	ConfirmMessages(context.Context, *ConfirmMessagesRequest) (*ConfirmMessagesResponse, error)
 	mustEmbedUnimplementedYarnsApiV1Server()
 }
 
@@ -127,8 +114,8 @@ type YarnsApiV1Server interface {
 // pointer dereference when methods are called.
 type UnimplementedYarnsApiV1Server struct{}
 
-func (UnimplementedYarnsApiV1Server) Register(context.Context, *RegisterRequest) (*RegisterResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Register not implemented")
+func (UnimplementedYarnsApiV1Server) RegisterUser(context.Context, *RegisterUserRequest) (*RegisterUserResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RegisterUser not implemented")
 }
 func (UnimplementedYarnsApiV1Server) GetUserById(context.Context, *GetUserByIdRequest) (*GetUserByIdResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUserById not implemented")
@@ -139,11 +126,8 @@ func (UnimplementedYarnsApiV1Server) SendMessage(context.Context, *SendMessageRe
 func (UnimplementedYarnsApiV1Server) CheckMessages(context.Context, *CheckMessagesRequest) (*CheckMessagesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CheckMessages not implemented")
 }
-func (UnimplementedYarnsApiV1Server) GetMessageById(context.Context, *GetMessageByIdRequest) (*GetMessageByIdResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetMessageById not implemented")
-}
-func (UnimplementedYarnsApiV1Server) ConfirmReceive(context.Context, *ConfirmReceiveRequest) (*ConfirmReceiveResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ConfirmReceive not implemented")
+func (UnimplementedYarnsApiV1Server) ConfirmMessages(context.Context, *ConfirmMessagesRequest) (*ConfirmMessagesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ConfirmMessages not implemented")
 }
 func (UnimplementedYarnsApiV1Server) mustEmbedUnimplementedYarnsApiV1Server() {}
 func (UnimplementedYarnsApiV1Server) testEmbeddedByValue()                    {}
@@ -166,20 +150,20 @@ func RegisterYarnsApiV1Server(s grpc.ServiceRegistrar, srv YarnsApiV1Server) {
 	s.RegisterService(&YarnsApiV1_ServiceDesc, srv)
 }
 
-func _YarnsApiV1_Register_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(RegisterRequest)
+func _YarnsApiV1_RegisterUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RegisterUserRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(YarnsApiV1Server).Register(ctx, in)
+		return srv.(YarnsApiV1Server).RegisterUser(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: YarnsApiV1_Register_FullMethodName,
+		FullMethod: YarnsApiV1_RegisterUser_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(YarnsApiV1Server).Register(ctx, req.(*RegisterRequest))
+		return srv.(YarnsApiV1Server).RegisterUser(ctx, req.(*RegisterUserRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -238,38 +222,20 @@ func _YarnsApiV1_CheckMessages_Handler(srv interface{}, ctx context.Context, dec
 	return interceptor(ctx, in, info, handler)
 }
 
-func _YarnsApiV1_GetMessageById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetMessageByIdRequest)
+func _YarnsApiV1_ConfirmMessages_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ConfirmMessagesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(YarnsApiV1Server).GetMessageById(ctx, in)
+		return srv.(YarnsApiV1Server).ConfirmMessages(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: YarnsApiV1_GetMessageById_FullMethodName,
+		FullMethod: YarnsApiV1_ConfirmMessages_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(YarnsApiV1Server).GetMessageById(ctx, req.(*GetMessageByIdRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _YarnsApiV1_ConfirmReceive_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ConfirmReceiveRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(YarnsApiV1Server).ConfirmReceive(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: YarnsApiV1_ConfirmReceive_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(YarnsApiV1Server).ConfirmReceive(ctx, req.(*ConfirmReceiveRequest))
+		return srv.(YarnsApiV1Server).ConfirmMessages(ctx, req.(*ConfirmMessagesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -282,8 +248,8 @@ var YarnsApiV1_ServiceDesc = grpc.ServiceDesc{
 	HandlerType: (*YarnsApiV1Server)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "Register",
-			Handler:    _YarnsApiV1_Register_Handler,
+			MethodName: "RegisterUser",
+			Handler:    _YarnsApiV1_RegisterUser_Handler,
 		},
 		{
 			MethodName: "GetUserById",
@@ -298,12 +264,8 @@ var YarnsApiV1_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _YarnsApiV1_CheckMessages_Handler,
 		},
 		{
-			MethodName: "GetMessageById",
-			Handler:    _YarnsApiV1_GetMessageById_Handler,
-		},
-		{
-			MethodName: "ConfirmReceive",
-			Handler:    _YarnsApiV1_ConfirmReceive_Handler,
+			MethodName: "ConfirmMessages",
+			Handler:    _YarnsApiV1_ConfirmMessages_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

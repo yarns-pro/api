@@ -78,6 +78,40 @@ public object MessageMetadataKt {
     public fun clearFilesize() {
       _builder.clearFilesize()
     }
+
+    /**
+     * `int32 storageId = 4 [json_name = "storageId"];`
+     */
+    public var storageId: kotlin.Int
+      @kotlin.jvm.JvmName("getStorageId")
+        get() = _builder.storageId
+      @kotlin.jvm.JvmName("setStorageId")
+        set(value) {
+        _builder.storageId = value
+      }
+    /**
+     * `int32 storageId = 4 [json_name = "storageId"];`
+     */
+    public fun clearStorageId() {
+      _builder.clearStorageId()
+    }
+
+    /**
+     * `string storageUrl = 5 [json_name = "storageUrl"];`
+     */
+    public var storageUrl: kotlin.String
+      @kotlin.jvm.JvmName("getStorageUrl")
+        get() = _builder.storageUrl
+      @kotlin.jvm.JvmName("setStorageUrl")
+        set(value) {
+        _builder.storageUrl = value
+      }
+    /**
+     * `string storageUrl = 5 [json_name = "storageUrl"];`
+     */
+    public fun clearStorageUrl() {
+      _builder.clearStorageUrl()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

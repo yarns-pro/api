@@ -6,13 +6,13 @@
 package pro.yarns.api.v1.service;
 
 /**
- * Protobuf type {@code pro.yarns.api.v1.service.RegisterRequest}
+ * Protobuf type {@code pro.yarns.api.v1.service.ConfirmMessagesResponse}
  */
 @com.google.protobuf.Generated
-public final class RegisterRequest extends
+public final class ConfirmMessagesResponse extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:pro.yarns.api.v1.service.RegisterRequest)
-    RegisterRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:pro.yarns.api.v1.service.ConfirmMessagesResponse)
+    ConfirmMessagesResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -21,38 +21,26 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 31,
       /* patch= */ 1,
       /* suffix= */ "",
-      RegisterRequest.class.getName());
+      ConfirmMessagesResponse.class.getName());
   }
-  // Use RegisterRequest.newBuilder() to construct.
-  private RegisterRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use ConfirmMessagesResponse.newBuilder() to construct.
+  private ConfirmMessagesResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private RegisterRequest() {
-    publicKey_ = com.google.protobuf.ByteString.EMPTY;
+  private ConfirmMessagesResponse() {
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_RegisterRequest_descriptor;
+    return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmMessagesResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_RegisterRequest_fieldAccessorTable
+    return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmMessagesResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            pro.yarns.api.v1.service.RegisterRequest.class, pro.yarns.api.v1.service.RegisterRequest.Builder.class);
-  }
-
-  public static final int PUBLICKEY_FIELD_NUMBER = 1;
-  private com.google.protobuf.ByteString publicKey_ = com.google.protobuf.ByteString.EMPTY;
-  /**
-   * <code>bytes publicKey = 1 [json_name = "publicKey"];</code>
-   * @return The publicKey.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString getPublicKey() {
-    return publicKey_;
+            pro.yarns.api.v1.service.ConfirmMessagesResponse.class, pro.yarns.api.v1.service.ConfirmMessagesResponse.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -69,9 +57,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!publicKey_.isEmpty()) {
-      output.writeBytes(1, publicKey_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -81,10 +66,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!publicKey_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(1, publicKey_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -95,13 +76,11 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof pro.yarns.api.v1.service.RegisterRequest)) {
+    if (!(obj instanceof pro.yarns.api.v1.service.ConfirmMessagesResponse)) {
       return super.equals(obj);
     }
-    pro.yarns.api.v1.service.RegisterRequest other = (pro.yarns.api.v1.service.RegisterRequest) obj;
+    pro.yarns.api.v1.service.ConfirmMessagesResponse other = (pro.yarns.api.v1.service.ConfirmMessagesResponse) obj;
 
-    if (!getPublicKey()
-        .equals(other.getPublicKey())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -113,51 +92,49 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + PUBLICKEY_FIELD_NUMBER;
-    hash = (53 * hash) + getPublicKey().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static pro.yarns.api.v1.service.RegisterRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static pro.yarns.api.v1.service.RegisterRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static pro.yarns.api.v1.service.RegisterRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static pro.yarns.api.v1.service.RegisterRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static pro.yarns.api.v1.service.RegisterRequest parseFrom(byte[] data)
+  public static pro.yarns.api.v1.service.ConfirmMessagesResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static pro.yarns.api.v1.service.RegisterRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static pro.yarns.api.v1.service.RegisterRequest parseFrom(java.io.InputStream input)
+  public static pro.yarns.api.v1.service.ConfirmMessagesResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static pro.yarns.api.v1.service.RegisterRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -165,26 +142,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static pro.yarns.api.v1.service.RegisterRequest parseDelimitedFrom(java.io.InputStream input)
+  public static pro.yarns.api.v1.service.ConfirmMessagesResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static pro.yarns.api.v1.service.RegisterRequest parseDelimitedFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static pro.yarns.api.v1.service.RegisterRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static pro.yarns.api.v1.service.RegisterRequest parseFrom(
+  public static pro.yarns.api.v1.service.ConfirmMessagesResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -197,7 +174,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(pro.yarns.api.v1.service.RegisterRequest prototype) {
+  public static Builder newBuilder(pro.yarns.api.v1.service.ConfirmMessagesResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -213,26 +190,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code pro.yarns.api.v1.service.RegisterRequest}
+   * Protobuf type {@code pro.yarns.api.v1.service.ConfirmMessagesResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:pro.yarns.api.v1.service.RegisterRequest)
-      pro.yarns.api.v1.service.RegisterRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:pro.yarns.api.v1.service.ConfirmMessagesResponse)
+      pro.yarns.api.v1.service.ConfirmMessagesResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_RegisterRequest_descriptor;
+      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmMessagesResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_RegisterRequest_fieldAccessorTable
+      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmMessagesResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              pro.yarns.api.v1.service.RegisterRequest.class, pro.yarns.api.v1.service.RegisterRequest.Builder.class);
+              pro.yarns.api.v1.service.ConfirmMessagesResponse.class, pro.yarns.api.v1.service.ConfirmMessagesResponse.Builder.class);
     }
 
-    // Construct using pro.yarns.api.v1.service.RegisterRequest.newBuilder()
+    // Construct using pro.yarns.api.v1.service.ConfirmMessagesResponse.newBuilder()
     private Builder() {
 
     }
@@ -245,25 +222,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      publicKey_ = com.google.protobuf.ByteString.EMPTY;
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_RegisterRequest_descriptor;
+      return pro.yarns.api.v1.service.ServiceProto.internal_static_pro_yarns_api_v1_service_ConfirmMessagesResponse_descriptor;
     }
 
     @java.lang.Override
-    public pro.yarns.api.v1.service.RegisterRequest getDefaultInstanceForType() {
-      return pro.yarns.api.v1.service.RegisterRequest.getDefaultInstance();
+    public pro.yarns.api.v1.service.ConfirmMessagesResponse getDefaultInstanceForType() {
+      return pro.yarns.api.v1.service.ConfirmMessagesResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public pro.yarns.api.v1.service.RegisterRequest build() {
-      pro.yarns.api.v1.service.RegisterRequest result = buildPartial();
+    public pro.yarns.api.v1.service.ConfirmMessagesResponse build() {
+      pro.yarns.api.v1.service.ConfirmMessagesResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -271,35 +246,24 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public pro.yarns.api.v1.service.RegisterRequest buildPartial() {
-      pro.yarns.api.v1.service.RegisterRequest result = new pro.yarns.api.v1.service.RegisterRequest(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+    public pro.yarns.api.v1.service.ConfirmMessagesResponse buildPartial() {
+      pro.yarns.api.v1.service.ConfirmMessagesResponse result = new pro.yarns.api.v1.service.ConfirmMessagesResponse(this);
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(pro.yarns.api.v1.service.RegisterRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.publicKey_ = publicKey_;
-      }
-    }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof pro.yarns.api.v1.service.RegisterRequest) {
-        return mergeFrom((pro.yarns.api.v1.service.RegisterRequest)other);
+      if (other instanceof pro.yarns.api.v1.service.ConfirmMessagesResponse) {
+        return mergeFrom((pro.yarns.api.v1.service.ConfirmMessagesResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(pro.yarns.api.v1.service.RegisterRequest other) {
-      if (other == pro.yarns.api.v1.service.RegisterRequest.getDefaultInstance()) return this;
-      if (!other.getPublicKey().isEmpty()) {
-        setPublicKey(other.getPublicKey());
-      }
+    public Builder mergeFrom(pro.yarns.api.v1.service.ConfirmMessagesResponse other) {
+      if (other == pro.yarns.api.v1.service.ConfirmMessagesResponse.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -326,11 +290,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              publicKey_ = input.readBytes();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -346,57 +305,24 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
-    private int bitField0_;
 
-    private com.google.protobuf.ByteString publicKey_ = com.google.protobuf.ByteString.EMPTY;
-    /**
-     * <code>bytes publicKey = 1 [json_name = "publicKey"];</code>
-     * @return The publicKey.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getPublicKey() {
-      return publicKey_;
-    }
-    /**
-     * <code>bytes publicKey = 1 [json_name = "publicKey"];</code>
-     * @param value The publicKey to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPublicKey(com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      publicKey_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bytes publicKey = 1 [json_name = "publicKey"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearPublicKey() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      publicKey_ = getDefaultInstance().getPublicKey();
-      onChanged();
-      return this;
-    }
-
-    // @@protoc_insertion_point(builder_scope:pro.yarns.api.v1.service.RegisterRequest)
+    // @@protoc_insertion_point(builder_scope:pro.yarns.api.v1.service.ConfirmMessagesResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:pro.yarns.api.v1.service.RegisterRequest)
-  private static final pro.yarns.api.v1.service.RegisterRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:pro.yarns.api.v1.service.ConfirmMessagesResponse)
+  private static final pro.yarns.api.v1.service.ConfirmMessagesResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new pro.yarns.api.v1.service.RegisterRequest();
+    DEFAULT_INSTANCE = new pro.yarns.api.v1.service.ConfirmMessagesResponse();
   }
 
-  public static pro.yarns.api.v1.service.RegisterRequest getDefaultInstance() {
+  public static pro.yarns.api.v1.service.ConfirmMessagesResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RegisterRequest>
-      PARSER = new com.google.protobuf.AbstractParser<RegisterRequest>() {
+  private static final com.google.protobuf.Parser<ConfirmMessagesResponse>
+      PARSER = new com.google.protobuf.AbstractParser<ConfirmMessagesResponse>() {
     @java.lang.Override
-    public RegisterRequest parsePartialFrom(
+    public ConfirmMessagesResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -415,17 +341,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<RegisterRequest> parser() {
+  public static com.google.protobuf.Parser<ConfirmMessagesResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<RegisterRequest> getParserForType() {
+  public com.google.protobuf.Parser<ConfirmMessagesResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public pro.yarns.api.v1.service.RegisterRequest getDefaultInstanceForType() {
+  public pro.yarns.api.v1.service.ConfirmMessagesResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

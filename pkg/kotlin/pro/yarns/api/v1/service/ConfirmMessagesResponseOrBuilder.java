@@ -6,7 +6,7 @@
 package pro.yarns.api.v1.service;
 
 @com.google.protobuf.Generated
-public interface ConfirmReceiveResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:pro.yarns.api.v1.service.ConfirmReceiveResponse)
+public interface ConfirmMessagesResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:pro.yarns.api.v1.service.ConfirmMessagesResponse)
     com.google.protobuf.MessageOrBuilder {
 }

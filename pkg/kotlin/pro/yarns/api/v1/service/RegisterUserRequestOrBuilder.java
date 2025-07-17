@@ -6,8 +6,8 @@
 package pro.yarns.api.v1.service;
 
 @com.google.protobuf.Generated
-public interface RegisterRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:pro.yarns.api.v1.service.RegisterRequest)
+public interface RegisterUserRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:pro.yarns.api.v1.service.RegisterUserRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
