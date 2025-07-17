@@ -110,27 +110,27 @@ func (x *RegisterUserResponse) GetUser() *entity.User {
 	return nil
 }
 
-type GetUserByIdRequest struct {
+type GetUsersByIdsRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	UserId        int64                  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`
+	UserIds       []int64                `protobuf:"varint,1,rep,packed,name=userIds,proto3" json:"userIds,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *GetUserByIdRequest) Reset() {
-	*x = GetUserByIdRequest{}
+func (x *GetUsersByIdsRequest) Reset() {
+	*x = GetUsersByIdsRequest{}
 	mi := &file_v1_service_service_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *GetUserByIdRequest) String() string {
+func (x *GetUsersByIdsRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*GetUserByIdRequest) ProtoMessage() {}
+func (*GetUsersByIdsRequest) ProtoMessage() {}
 
-func (x *GetUserByIdRequest) ProtoReflect() protoreflect.Message {
+func (x *GetUsersByIdsRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_v1_service_service_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -142,39 +142,39 @@ func (x *GetUserByIdRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use GetUserByIdRequest.ProtoReflect.Descriptor instead.
-func (*GetUserByIdRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use GetUsersByIdsRequest.ProtoReflect.Descriptor instead.
+func (*GetUsersByIdsRequest) Descriptor() ([]byte, []int) {
 	return file_v1_service_service_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *GetUserByIdRequest) GetUserId() int64 {
+func (x *GetUsersByIdsRequest) GetUserIds() []int64 {
 	if x != nil {
-		return x.UserId
+		return x.UserIds
 	}
-	return 0
+	return nil
 }
 
-type GetUserByIdResponse struct {
+type GetUsersByIdsResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	User          *entity.User           `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"`
+	User          []*entity.User         `protobuf:"bytes,1,rep,name=user,proto3" json:"user,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *GetUserByIdResponse) Reset() {
-	*x = GetUserByIdResponse{}
+func (x *GetUsersByIdsResponse) Reset() {
+	*x = GetUsersByIdsResponse{}
 	mi := &file_v1_service_service_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *GetUserByIdResponse) String() string {
+func (x *GetUsersByIdsResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*GetUserByIdResponse) ProtoMessage() {}
+func (*GetUsersByIdsResponse) ProtoMessage() {}
 
-func (x *GetUserByIdResponse) ProtoReflect() protoreflect.Message {
+func (x *GetUsersByIdsResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_v1_service_service_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -186,12 +186,12 @@ func (x *GetUserByIdResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use GetUserByIdResponse.ProtoReflect.Descriptor instead.
-func (*GetUserByIdResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use GetUsersByIdsResponse.ProtoReflect.Descriptor instead.
+func (*GetUsersByIdsResponse) Descriptor() ([]byte, []int) {
 	return file_v1_service_service_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *GetUserByIdResponse) GetUser() *entity.User {
+func (x *GetUsersByIdsResponse) GetUser() []*entity.User {
 	if x != nil {
 		return x.User
 	}
@@ -486,11 +486,11 @@ const file_v1_service_service_proto_rawDesc = "" +
 	"\x13RegisterUserRequest\x12\x1c\n" +
 	"\tpublicKey\x18\x01 \x01(\fR\tpublicKey\"I\n" +
 	"\x14RegisterUserResponse\x121\n" +
-	"\x04user\x18\x01 \x01(\v2\x1d.pro.yarns.api.v1.entity.UserR\x04user\",\n" +
-	"\x12GetUserByIdRequest\x12\x16\n" +
-	"\x06userId\x18\x01 \x01(\x03R\x06userId\"H\n" +
-	"\x13GetUserByIdResponse\x121\n" +
-	"\x04user\x18\x01 \x01(\v2\x1d.pro.yarns.api.v1.entity.UserR\x04user\"\xb2\x01\n" +
+	"\x04user\x18\x01 \x01(\v2\x1d.pro.yarns.api.v1.entity.UserR\x04user\"0\n" +
+	"\x14GetUsersByIdsRequest\x12\x18\n" +
+	"\auserIds\x18\x01 \x03(\x03R\auserIds\"J\n" +
+	"\x15GetUsersByIdsResponse\x121\n" +
+	"\x04user\x18\x01 \x03(\v2\x1d.pro.yarns.api.v1.entity.UserR\x04user\"\xb2\x01\n" +
 	"\x12SendMessageRequest\x12\x0e\n" +
 	"\x02to\x18\x01 \x01(\x03R\x02to\x128\n" +
 	"\x04type\x18\x02 \x01(\x0e2$.pro.yarns.api.v1.entity.MessageTypeR\x04type\x12,\n" +
@@ -506,11 +506,11 @@ const file_v1_service_service_proto_rawDesc = "" +
 	"\n" +
 	"messageIds\x18\x01 \x03(\x03R\n" +
 	"messageIds\"\x19\n" +
-	"\x17ConfirmMessagesResponse2\xbd\x04\n" +
+	"\x17ConfirmMessagesResponse2\xc3\x04\n" +
 	"\n" +
 	"YarnsApiV1\x12m\n" +
-	"\fRegisterUser\x12-.pro.yarns.api.v1.service.RegisterUserRequest\x1a..pro.yarns.api.v1.service.RegisterUserResponse\x12j\n" +
-	"\vGetUserById\x12,.pro.yarns.api.v1.service.GetUserByIdRequest\x1a-.pro.yarns.api.v1.service.GetUserByIdResponse\x12j\n" +
+	"\fRegisterUser\x12-.pro.yarns.api.v1.service.RegisterUserRequest\x1a..pro.yarns.api.v1.service.RegisterUserResponse\x12p\n" +
+	"\rGetUsersByIds\x12..pro.yarns.api.v1.service.GetUsersByIdsRequest\x1a/.pro.yarns.api.v1.service.GetUsersByIdsResponse\x12j\n" +
 	"\vSendMessage\x12,.pro.yarns.api.v1.service.SendMessageRequest\x1a-.pro.yarns.api.v1.service.SendMessageResponse\x12p\n" +
 	"\rCheckMessages\x12..pro.yarns.api.v1.service.CheckMessagesRequest\x1a/.pro.yarns.api.v1.service.CheckMessagesResponse\x12v\n" +
 	"\x0fConfirmMessages\x120.pro.yarns.api.v1.service.ConfirmMessagesRequest\x1a1.pro.yarns.api.v1.service.ConfirmMessagesResponseBV\n" +
@@ -532,8 +532,8 @@ var file_v1_service_service_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_v1_service_service_proto_goTypes = []any{
 	(*RegisterUserRequest)(nil),     // 0: pro.yarns.api.v1.service.RegisterUserRequest
 	(*RegisterUserResponse)(nil),    // 1: pro.yarns.api.v1.service.RegisterUserResponse
-	(*GetUserByIdRequest)(nil),      // 2: pro.yarns.api.v1.service.GetUserByIdRequest
-	(*GetUserByIdResponse)(nil),     // 3: pro.yarns.api.v1.service.GetUserByIdResponse
+	(*GetUsersByIdsRequest)(nil),    // 2: pro.yarns.api.v1.service.GetUsersByIdsRequest
+	(*GetUsersByIdsResponse)(nil),   // 3: pro.yarns.api.v1.service.GetUsersByIdsResponse
 	(*SendMessageRequest)(nil),      // 4: pro.yarns.api.v1.service.SendMessageRequest
 	(*SendMessageResponse)(nil),     // 5: pro.yarns.api.v1.service.SendMessageResponse
 	(*CheckMessagesRequest)(nil),    // 6: pro.yarns.api.v1.service.CheckMessagesRequest
@@ -546,16 +546,16 @@ var file_v1_service_service_proto_goTypes = []any{
 }
 var file_v1_service_service_proto_depIdxs = []int32{
 	10, // 0: pro.yarns.api.v1.service.RegisterUserResponse.user:type_name -> pro.yarns.api.v1.entity.User
-	10, // 1: pro.yarns.api.v1.service.GetUserByIdResponse.user:type_name -> pro.yarns.api.v1.entity.User
+	10, // 1: pro.yarns.api.v1.service.GetUsersByIdsResponse.user:type_name -> pro.yarns.api.v1.entity.User
 	11, // 2: pro.yarns.api.v1.service.SendMessageRequest.type:type_name -> pro.yarns.api.v1.entity.MessageType
 	12, // 3: pro.yarns.api.v1.service.CheckMessagesResponse.messages:type_name -> pro.yarns.api.v1.entity.Message
 	0,  // 4: pro.yarns.api.v1.service.YarnsApiV1.RegisterUser:input_type -> pro.yarns.api.v1.service.RegisterUserRequest
-	2,  // 5: pro.yarns.api.v1.service.YarnsApiV1.GetUserById:input_type -> pro.yarns.api.v1.service.GetUserByIdRequest
+	2,  // 5: pro.yarns.api.v1.service.YarnsApiV1.GetUsersByIds:input_type -> pro.yarns.api.v1.service.GetUsersByIdsRequest
 	4,  // 6: pro.yarns.api.v1.service.YarnsApiV1.SendMessage:input_type -> pro.yarns.api.v1.service.SendMessageRequest
 	6,  // 7: pro.yarns.api.v1.service.YarnsApiV1.CheckMessages:input_type -> pro.yarns.api.v1.service.CheckMessagesRequest
 	8,  // 8: pro.yarns.api.v1.service.YarnsApiV1.ConfirmMessages:input_type -> pro.yarns.api.v1.service.ConfirmMessagesRequest
 	1,  // 9: pro.yarns.api.v1.service.YarnsApiV1.RegisterUser:output_type -> pro.yarns.api.v1.service.RegisterUserResponse
-	3,  // 10: pro.yarns.api.v1.service.YarnsApiV1.GetUserById:output_type -> pro.yarns.api.v1.service.GetUserByIdResponse
+	3,  // 10: pro.yarns.api.v1.service.YarnsApiV1.GetUsersByIds:output_type -> pro.yarns.api.v1.service.GetUsersByIdsResponse
 	5,  // 11: pro.yarns.api.v1.service.YarnsApiV1.SendMessage:output_type -> pro.yarns.api.v1.service.SendMessageResponse
 	7,  // 12: pro.yarns.api.v1.service.YarnsApiV1.CheckMessages:output_type -> pro.yarns.api.v1.service.CheckMessagesResponse
 	9,  // 13: pro.yarns.api.v1.service.YarnsApiV1.ConfirmMessages:output_type -> pro.yarns.api.v1.service.ConfirmMessagesResponse

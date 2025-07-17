@@ -13,7 +13,7 @@ import "v1/entity/message_type.proto";
 
 service YarnsApiV1 {
   rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse);
-  rpc GetUserById (GetUserByIdRequest) returns (GetUserByIdResponse);
+  rpc GetUsersByIds (GetUsersByIdsRequest) returns (GetUsersByIdsResponse);
   rpc SendMessage (SendMessageRequest) returns (SendMessageResponse);
   rpc CheckMessages (CheckMessagesRequest) returns (CheckMessagesResponse);
   rpc ConfirmMessages (ConfirmMessagesRequest) returns (ConfirmMessagesResponse);
@@ -27,12 +27,12 @@ message RegisterUserResponse {
   entity.User user = 1;
 }
 
-message GetUserByIdRequest {
-  int64 userId = 1;
+message GetUsersByIdsRequest {
+  repeated int64 userIds = 1;
 }
 
-message GetUserByIdResponse {
-  entity.User user = 1;
+message GetUsersByIdsResponse {
+  repeated entity.User user = 1;
 }
 
 message SendMessageRequest {

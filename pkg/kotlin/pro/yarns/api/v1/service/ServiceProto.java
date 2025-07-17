@@ -37,15 +37,15 @@ public final class ServiceProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_pro_yarns_api_v1_service_RegisterUserResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pro_yarns_api_v1_service_GetUserByIdRequest_descriptor;
+    internal_static_pro_yarns_api_v1_service_GetUsersByIdsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pro_yarns_api_v1_service_GetUserByIdRequest_fieldAccessorTable;
+      internal_static_pro_yarns_api_v1_service_GetUsersByIdsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pro_yarns_api_v1_service_GetUserByIdResponse_descriptor;
+    internal_static_pro_yarns_api_v1_service_GetUsersByIdsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_pro_yarns_api_v1_service_GetUserByIdResponse_fieldAccessorTable;
+      internal_static_pro_yarns_api_v1_service_GetUsersByIdsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pro_yarns_api_v1_service_SendMessageRequest_descriptor;
   static final 
@@ -91,38 +91,39 @@ public final class ServiceProto {
       "ype.proto\"3\n\023RegisterUserRequest\022\034\n\tpubl" +
       "icKey\030\001 \001(\014R\tpublicKey\"I\n\024RegisterUserRe" +
       "sponse\0221\n\004user\030\001 \001(\0132\035.pro.yarns.api.v1." +
-      "entity.UserR\004user\",\n\022GetUserByIdRequest\022" +
-      "\026\n\006userId\030\001 \001(\003R\006userId\"H\n\023GetUserByIdRe" +
-      "sponse\0221\n\004user\030\001 \001(\0132\035.pro.yarns.api.v1." +
-      "entity.UserR\004user\"\262\001\n\022SendMessageRequest" +
-      "\022\016\n\002to\030\001 \001(\003R\002to\0228\n\004type\030\002 \001(\0162$.pro.yar" +
-      "ns.api.v1.entity.MessageTypeR\004type\022,\n\021en" +
-      "cryptedMetadata\030\003 \001(\014R\021encryptedMetadata" +
-      "\022$\n\rencryptedBody\030\004 \001(\014R\rencryptedBody\"3" +
-      "\n\023SendMessageResponse\022\034\n\tmessageId\030\001 \001(\003" +
-      "R\tmessageId\"<\n\024CheckMessagesRequest\022$\n\rl" +
-      "astMessageId\030\001 \001(\003R\rlastMessageId\"U\n\025Che" +
-      "ckMessagesResponse\022<\n\010messages\030\001 \003(\0132 .p" +
-      "ro.yarns.api.v1.entity.MessageR\010messages" +
-      "\"8\n\026ConfirmMessagesRequest\022\036\n\nmessageIds" +
-      "\030\001 \003(\003R\nmessageIds\"\031\n\027ConfirmMessagesRes" +
-      "ponse2\275\004\n\nYarnsApiV1\022m\n\014RegisterUser\022-.p" +
-      "ro.yarns.api.v1.service.RegisterUserRequ" +
-      "est\032..pro.yarns.api.v1.service.RegisterU" +
-      "serResponse\022j\n\013GetUserById\022,.pro.yarns.a" +
-      "pi.v1.service.GetUserByIdRequest\032-.pro.y" +
-      "arns.api.v1.service.GetUserByIdResponse\022" +
-      "j\n\013SendMessage\022,.pro.yarns.api.v1.servic" +
-      "e.SendMessageRequest\032-.pro.yarns.api.v1." +
-      "service.SendMessageResponse\022p\n\rCheckMess" +
-      "ages\022..pro.yarns.api.v1.service.CheckMes" +
-      "sagesRequest\032/.pro.yarns.api.v1.service." +
-      "CheckMessagesResponse\022v\n\017ConfirmMessages" +
-      "\0220.pro.yarns.api.v1.service.ConfirmMessa" +
-      "gesRequest\0321.pro.yarns.api.v1.service.Co" +
-      "nfirmMessagesResponseBV\n\030pro.yarns.api.v" +
-      "1.serviceB\014ServiceProtoP\001Z*github.com/ya" +
-      "rns-pro/api/pkg/go/v1/serviceb\006proto3"
+      "entity.UserR\004user\"0\n\024GetUsersByIdsReques" +
+      "t\022\030\n\007userIds\030\001 \003(\003R\007userIds\"J\n\025GetUsersB" +
+      "yIdsResponse\0221\n\004user\030\001 \003(\0132\035.pro.yarns.a" +
+      "pi.v1.entity.UserR\004user\"\262\001\n\022SendMessageR" +
+      "equest\022\016\n\002to\030\001 \001(\003R\002to\0228\n\004type\030\002 \001(\0162$.p" +
+      "ro.yarns.api.v1.entity.MessageTypeR\004type" +
+      "\022,\n\021encryptedMetadata\030\003 \001(\014R\021encryptedMe" +
+      "tadata\022$\n\rencryptedBody\030\004 \001(\014R\rencrypted" +
+      "Body\"3\n\023SendMessageResponse\022\034\n\tmessageId" +
+      "\030\001 \001(\003R\tmessageId\"<\n\024CheckMessagesReques" +
+      "t\022$\n\rlastMessageId\030\001 \001(\003R\rlastMessageId\"" +
+      "U\n\025CheckMessagesResponse\022<\n\010messages\030\001 \003" +
+      "(\0132 .pro.yarns.api.v1.entity.MessageR\010me" +
+      "ssages\"8\n\026ConfirmMessagesRequest\022\036\n\nmess" +
+      "ageIds\030\001 \003(\003R\nmessageIds\"\031\n\027ConfirmMessa" +
+      "gesResponse2\303\004\n\nYarnsApiV1\022m\n\014RegisterUs" +
+      "er\022-.pro.yarns.api.v1.service.RegisterUs" +
+      "erRequest\032..pro.yarns.api.v1.service.Reg" +
+      "isterUserResponse\022p\n\rGetUsersByIds\022..pro" +
+      ".yarns.api.v1.service.GetUsersByIdsReque" +
+      "st\032/.pro.yarns.api.v1.service.GetUsersBy" +
+      "IdsResponse\022j\n\013SendMessage\022,.pro.yarns.a" +
+      "pi.v1.service.SendMessageRequest\032-.pro.y" +
+      "arns.api.v1.service.SendMessageResponse\022" +
+      "p\n\rCheckMessages\022..pro.yarns.api.v1.serv" +
+      "ice.CheckMessagesRequest\032/.pro.yarns.api" +
+      ".v1.service.CheckMessagesResponse\022v\n\017Con" +
+      "firmMessages\0220.pro.yarns.api.v1.service." +
+      "ConfirmMessagesRequest\0321.pro.yarns.api.v" +
+      "1.service.ConfirmMessagesResponseBV\n\030pro" +
+      ".yarns.api.v1.serviceB\014ServiceProtoP\001Z*g" +
+      "ithub.com/yarns-pro/api/pkg/go/v1/servic" +
+      "eb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -143,17 +144,17 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_pro_yarns_api_v1_service_RegisterUserResponse_descriptor,
         new java.lang.String[] { "User", });
-    internal_static_pro_yarns_api_v1_service_GetUserByIdRequest_descriptor =
+    internal_static_pro_yarns_api_v1_service_GetUsersByIdsRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_pro_yarns_api_v1_service_GetUserByIdRequest_fieldAccessorTable = new
+    internal_static_pro_yarns_api_v1_service_GetUsersByIdsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pro_yarns_api_v1_service_GetUserByIdRequest_descriptor,
-        new java.lang.String[] { "UserId", });
-    internal_static_pro_yarns_api_v1_service_GetUserByIdResponse_descriptor =
+        internal_static_pro_yarns_api_v1_service_GetUsersByIdsRequest_descriptor,
+        new java.lang.String[] { "UserIds", });
+    internal_static_pro_yarns_api_v1_service_GetUsersByIdsResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_pro_yarns_api_v1_service_GetUserByIdResponse_fieldAccessorTable = new
+    internal_static_pro_yarns_api_v1_service_GetUsersByIdsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_pro_yarns_api_v1_service_GetUserByIdResponse_descriptor,
+        internal_static_pro_yarns_api_v1_service_GetUsersByIdsResponse_descriptor,
         new java.lang.String[] { "User", });
     internal_static_pro_yarns_api_v1_service_SendMessageRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);

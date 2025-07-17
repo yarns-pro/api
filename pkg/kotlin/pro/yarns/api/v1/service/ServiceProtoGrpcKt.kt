@@ -36,9 +36,9 @@ public object YarnsApiV1GrpcKt {
     @JvmStatic
     get() = YarnsApiV1Grpc.getRegisterUserMethod()
 
-  public val getUserByIdMethod: MethodDescriptor<GetUserByIdRequest, GetUserByIdResponse>
+  public val getUsersByIdsMethod: MethodDescriptor<GetUsersByIdsRequest, GetUsersByIdsResponse>
     @JvmStatic
-    get() = YarnsApiV1Grpc.getGetUserByIdMethod()
+    get() = YarnsApiV1Grpc.getGetUsersByIdsMethod()
 
   public val sendMessageMethod: MethodDescriptor<SendMessageRequest, SendMessageResponse>
     @JvmStatic
@@ -100,10 +100,10 @@ public object YarnsApiV1GrpcKt {
      *
      * @return The single response from the server.
      */
-    public suspend fun getUserById(request: GetUserByIdRequest, headers: Metadata = Metadata()):
-        GetUserByIdResponse = unaryRpc(
+    public suspend fun getUsersByIds(request: GetUsersByIdsRequest, headers: Metadata = Metadata()):
+        GetUsersByIdsResponse = unaryRpc(
       channel,
-      YarnsApiV1Grpc.getGetUserByIdMethod(),
+      YarnsApiV1Grpc.getGetUsersByIdsMethod(),
       request,
       callOptions,
       headers
@@ -198,7 +198,7 @@ public object YarnsApiV1GrpcKt {
         StatusException(UNIMPLEMENTED.withDescription("Method pro.yarns.api.v1.service.YarnsApiV1.RegisterUser is unimplemented"))
 
     /**
-     * Returns the response to an RPC for pro.yarns.api.v1.service.YarnsApiV1.GetUserById.
+     * Returns the response to an RPC for pro.yarns.api.v1.service.YarnsApiV1.GetUsersByIds.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -208,8 +208,9 @@ public object YarnsApiV1GrpcKt {
      *
      * @param request The request from the client.
      */
-    public open suspend fun getUserById(request: GetUserByIdRequest): GetUserByIdResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method pro.yarns.api.v1.service.YarnsApiV1.GetUserById is unimplemented"))
+    public open suspend fun getUsersByIds(request: GetUsersByIdsRequest): GetUsersByIdsResponse =
+        throw
+        StatusException(UNIMPLEMENTED.withDescription("Method pro.yarns.api.v1.service.YarnsApiV1.GetUsersByIds is unimplemented"))
 
     /**
      * Returns the response to an RPC for pro.yarns.api.v1.service.YarnsApiV1.SendMessage.
@@ -263,8 +264,8 @@ public object YarnsApiV1GrpcKt {
     ))
       .addMethod(unaryServerMethodDefinition(
       context = this.context,
-      descriptor = YarnsApiV1Grpc.getGetUserByIdMethod(),
-      implementation = ::getUserById
+      descriptor = YarnsApiV1Grpc.getGetUsersByIdsMethod(),
+      implementation = ::getUsersByIds
     ))
       .addMethod(unaryServerMethodDefinition(
       context = this.context,

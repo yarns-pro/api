@@ -46,35 +46,35 @@ public final class YarnsApiV1Grpc {
     return getRegisterUserMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<pro.yarns.api.v1.service.GetUserByIdRequest,
-      pro.yarns.api.v1.service.GetUserByIdResponse> getGetUserByIdMethod;
+  private static volatile io.grpc.MethodDescriptor<pro.yarns.api.v1.service.GetUsersByIdsRequest,
+      pro.yarns.api.v1.service.GetUsersByIdsResponse> getGetUsersByIdsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetUserById",
-      requestType = pro.yarns.api.v1.service.GetUserByIdRequest.class,
-      responseType = pro.yarns.api.v1.service.GetUserByIdResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "GetUsersByIds",
+      requestType = pro.yarns.api.v1.service.GetUsersByIdsRequest.class,
+      responseType = pro.yarns.api.v1.service.GetUsersByIdsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<pro.yarns.api.v1.service.GetUserByIdRequest,
-      pro.yarns.api.v1.service.GetUserByIdResponse> getGetUserByIdMethod() {
-    io.grpc.MethodDescriptor<pro.yarns.api.v1.service.GetUserByIdRequest, pro.yarns.api.v1.service.GetUserByIdResponse> getGetUserByIdMethod;
-    if ((getGetUserByIdMethod = YarnsApiV1Grpc.getGetUserByIdMethod) == null) {
+  public static io.grpc.MethodDescriptor<pro.yarns.api.v1.service.GetUsersByIdsRequest,
+      pro.yarns.api.v1.service.GetUsersByIdsResponse> getGetUsersByIdsMethod() {
+    io.grpc.MethodDescriptor<pro.yarns.api.v1.service.GetUsersByIdsRequest, pro.yarns.api.v1.service.GetUsersByIdsResponse> getGetUsersByIdsMethod;
+    if ((getGetUsersByIdsMethod = YarnsApiV1Grpc.getGetUsersByIdsMethod) == null) {
       synchronized (YarnsApiV1Grpc.class) {
-        if ((getGetUserByIdMethod = YarnsApiV1Grpc.getGetUserByIdMethod) == null) {
-          YarnsApiV1Grpc.getGetUserByIdMethod = getGetUserByIdMethod =
-              io.grpc.MethodDescriptor.<pro.yarns.api.v1.service.GetUserByIdRequest, pro.yarns.api.v1.service.GetUserByIdResponse>newBuilder()
+        if ((getGetUsersByIdsMethod = YarnsApiV1Grpc.getGetUsersByIdsMethod) == null) {
+          YarnsApiV1Grpc.getGetUsersByIdsMethod = getGetUsersByIdsMethod =
+              io.grpc.MethodDescriptor.<pro.yarns.api.v1.service.GetUsersByIdsRequest, pro.yarns.api.v1.service.GetUsersByIdsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUsersByIds"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  pro.yarns.api.v1.service.GetUserByIdRequest.getDefaultInstance()))
+                  pro.yarns.api.v1.service.GetUsersByIdsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  pro.yarns.api.v1.service.GetUserByIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new YarnsApiV1MethodDescriptorSupplier("GetUserById"))
+                  pro.yarns.api.v1.service.GetUsersByIdsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new YarnsApiV1MethodDescriptorSupplier("GetUsersByIds"))
               .build();
         }
       }
     }
-    return getGetUserByIdMethod;
+    return getGetUsersByIdsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<pro.yarns.api.v1.service.SendMessageRequest,
@@ -242,9 +242,9 @@ public final class YarnsApiV1Grpc {
 
     /**
      */
-    default void getUserById(pro.yarns.api.v1.service.GetUserByIdRequest request,
-        io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.GetUserByIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserByIdMethod(), responseObserver);
+    default void getUsersByIds(pro.yarns.api.v1.service.GetUsersByIdsRequest request,
+        io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.GetUsersByIdsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUsersByIdsMethod(), responseObserver);
     }
 
     /**
@@ -306,10 +306,10 @@ public final class YarnsApiV1Grpc {
 
     /**
      */
-    public void getUserById(pro.yarns.api.v1.service.GetUserByIdRequest request,
-        io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.GetUserByIdResponse> responseObserver) {
+    public void getUsersByIds(pro.yarns.api.v1.service.GetUsersByIdsRequest request,
+        io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.GetUsersByIdsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetUserByIdMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetUsersByIdsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -362,9 +362,9 @@ public final class YarnsApiV1Grpc {
 
     /**
      */
-    public pro.yarns.api.v1.service.GetUserByIdResponse getUserById(pro.yarns.api.v1.service.GetUserByIdRequest request) {
+    public pro.yarns.api.v1.service.GetUsersByIdsResponse getUsersByIds(pro.yarns.api.v1.service.GetUsersByIdsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetUserByIdMethod(), getCallOptions(), request);
+          getChannel(), getGetUsersByIdsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -414,9 +414,9 @@ public final class YarnsApiV1Grpc {
 
     /**
      */
-    public pro.yarns.api.v1.service.GetUserByIdResponse getUserById(pro.yarns.api.v1.service.GetUserByIdRequest request) {
+    public pro.yarns.api.v1.service.GetUsersByIdsResponse getUsersByIds(pro.yarns.api.v1.service.GetUsersByIdsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetUserByIdMethod(), getCallOptions(), request);
+          getChannel(), getGetUsersByIdsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -467,10 +467,10 @@ public final class YarnsApiV1Grpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<pro.yarns.api.v1.service.GetUserByIdResponse> getUserById(
-        pro.yarns.api.v1.service.GetUserByIdRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<pro.yarns.api.v1.service.GetUsersByIdsResponse> getUsersByIds(
+        pro.yarns.api.v1.service.GetUsersByIdsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetUserByIdMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetUsersByIdsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -499,7 +499,7 @@ public final class YarnsApiV1Grpc {
   }
 
   private static final int METHODID_REGISTER_USER = 0;
-  private static final int METHODID_GET_USER_BY_ID = 1;
+  private static final int METHODID_GET_USERS_BY_IDS = 1;
   private static final int METHODID_SEND_MESSAGE = 2;
   private static final int METHODID_CHECK_MESSAGES = 3;
   private static final int METHODID_CONFIRM_MESSAGES = 4;
@@ -525,9 +525,9 @@ public final class YarnsApiV1Grpc {
           serviceImpl.registerUser((pro.yarns.api.v1.service.RegisterUserRequest) request,
               (io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.RegisterUserResponse>) responseObserver);
           break;
-        case METHODID_GET_USER_BY_ID:
-          serviceImpl.getUserById((pro.yarns.api.v1.service.GetUserByIdRequest) request,
-              (io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.GetUserByIdResponse>) responseObserver);
+        case METHODID_GET_USERS_BY_IDS:
+          serviceImpl.getUsersByIds((pro.yarns.api.v1.service.GetUsersByIdsRequest) request,
+              (io.grpc.stub.StreamObserver<pro.yarns.api.v1.service.GetUsersByIdsResponse>) responseObserver);
           break;
         case METHODID_SEND_MESSAGE:
           serviceImpl.sendMessage((pro.yarns.api.v1.service.SendMessageRequest) request,
@@ -567,12 +567,12 @@ public final class YarnsApiV1Grpc {
               pro.yarns.api.v1.service.RegisterUserResponse>(
                 service, METHODID_REGISTER_USER)))
         .addMethod(
-          getGetUserByIdMethod(),
+          getGetUsersByIdsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              pro.yarns.api.v1.service.GetUserByIdRequest,
-              pro.yarns.api.v1.service.GetUserByIdResponse>(
-                service, METHODID_GET_USER_BY_ID)))
+              pro.yarns.api.v1.service.GetUsersByIdsRequest,
+              pro.yarns.api.v1.service.GetUsersByIdsResponse>(
+                service, METHODID_GET_USERS_BY_IDS)))
         .addMethod(
           getSendMessageMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -643,7 +643,7 @@ public final class YarnsApiV1Grpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new YarnsApiV1FileDescriptorSupplier())
               .addMethod(getRegisterUserMethod())
-              .addMethod(getGetUserByIdMethod())
+              .addMethod(getGetUsersByIdsMethod())
               .addMethod(getSendMessageMethod())
               .addMethod(getCheckMessagesMethod())
               .addMethod(getConfirmMessagesMethod())
